@@ -45,18 +45,18 @@ Demostrar cómo una solución tecnológica puede:
 ## 🧩 Arquitectura del Proyecto
 src/
 │
-├── components/
-│ ├── common/
-│ ├── maps/
-│ ├── donors/
-│ ├── training/
-│ ├── jobs/
+├── components/ # Componentes reutilizables
+│ ├── common/ # Botones, inputs, tablas, etc.
+│ ├── maps/ # Componentes de mapas (Leaflet)
+│ ├── donors/ # Donaciones y donantes
+│ ├── training/ # Cursos y formación
+│ └── jobs/ # Empresas y vacantes
 │
-├── views/
-├── router/
-├── stores/
-├── data/
-├── layouts/
+├── views/ # Vistas principales (pages)
+├── router/ # Configuración de rutas (Vue Router)
+├── stores/ # Estado global (Pinia)
+├── data/ # Datos mock (JSON)
+└── layouts/ # Layout principal (sidebar, header)
 
 
 ---
