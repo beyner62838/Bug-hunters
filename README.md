@@ -180,26 +180,11 @@ Se gestionan mediante:
 
 ---
 
-## 🚀 Instalación y ejecución
+## 🚀 Ejecución
 
-### 1. Clonar el repositorio
+### 1. Hacer clic en el siguiente link:
 ```bash
-git clone https://github.com/beyner62838/Bug-hunters.git
-```
-```bash
-cd Bug-hunters
-```
-### 2. Instalar dependencias
-```bash
-npm install
-```
-### 3. Ejecutar en desarrollo
-```bash
-npm run dev
-```
-### 4. Construir para producción
-```bash
-npm run build
+https://beyner62838.github.io/Bug-hunters/#/login
 ```
 
 ## 📊 Impacto Esperado
