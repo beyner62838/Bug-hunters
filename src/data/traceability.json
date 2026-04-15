@@ -1,0 +1,35 @@
+[
+  {
+    "id": "trace-01",
+    "donor": "Mayorista San Pedro",
+    "receiver": "Fundación Nueva Esperanza",
+    "donation": "Tubérculos y hortalizas",
+    "publishedAt": "2026-04-08T08:30:00.000Z",
+    "assignedAt": "2026-04-08T10:15:00.000Z",
+    "deliveredAt": "2026-04-08T13:00:00.000Z",
+    "status": "delivered",
+    "observations": "Entrega validada para 110 familias."
+  },
+  {
+    "id": "trace-02",
+    "donor": "Pan de Barrio Norte",
+    "receiver": "Comedor Luz del Río",
+    "donation": "Pan fresco",
+    "publishedAt": "2026-04-10T06:50:00.000Z",
+    "assignedAt": "2026-04-10T08:00:00.000Z",
+    "deliveredAt": "2026-04-10T09:20:00.000Z",
+    "status": "delivered",
+    "observations": "Cadena de distribución cerrada sin incidentes."
+  },
+  {
+    "id": "trace-03",
+    "donor": "Fruver Los Guaduales",
+    "receiver": "Red Juvenil Cívica",
+    "donation": "Fruta madura para consumo inmediato",
+    "publishedAt": "2026-04-12T15:10:00.000Z",
+    "assignedAt": "2026-04-12T16:00:00.000Z",
+    "deliveredAt": null,
+    "status": "in_route",
+    "observations": "Ruta priorizada por alta demanda barrial."
+  }
+]

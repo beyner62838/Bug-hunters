@@ -1,0 +1,60 @@
+{
+  "projectName": "RedAlimenta",
+  "tagline": "Tecnología cívica para rescatar alimentos, coordinar entregas y abrir rutas reales de empleabilidad.",
+  "heroDescription": "Una plataforma que conecta comercios con alimentos próximos a perecer y organizaciones comunitarias, mientras fortalece la inclusión productiva con formación y oportunidades laborales aliadas.",
+  "howItWorks": [
+    {
+      "title": "Publicación inmediata",
+      "description": "Comercios registran lotes disponibles con cantidad, categoría, urgencia y ubicación."
+    },
+    {
+      "title": "Asignación inteligente",
+      "description": "Organizaciones filtran por necesidad, cercanía y prioridad para solicitar donaciones."
+    },
+    {
+      "title": "Trazabilidad e impacto",
+      "description": "La red monitorea estados, rutas simuladas, entregas y resultados sociales desde un solo panel."
+    }
+  ],
+  "impactHighlights": [
+    {
+      "title": "Comidas recuperadas al mes",
+      "value": 18400,
+      "hint": "Estimación basada en pilotos urbanos y rotación de inventario."
+    },
+    {
+      "title": "Hogares alcanzados",
+      "value": 1260,
+      "hint": "Cobertura potencial con red aliada y entregas comunitarias."
+    },
+    {
+      "title": "Personas conectadas con formación",
+      "value": 420,
+      "hint": "Cursos básicos orientados a empleabilidad y operación."
+    }
+  ],
+  "allies": [
+    "Universidad Surcolombiana",
+    "Red de Comedores Comunitarios",
+    "Cámara de Comercio de Neiva",
+    "Colectivo Ruta Solidaria",
+    "Empresas locales con enfoque ESG"
+  ],
+  "adminIndicators": [
+    {
+      "title": "Recuperación operativa",
+      "value": "87%",
+      "description": "Lotes gestionados antes del vencimiento."
+    },
+    {
+      "title": "Tiempo promedio de asignación",
+      "value": "42 min",
+      "description": "Desde publicación hasta confirmación de receptor."
+    },
+    {
+      "title": "Transición a formación",
+      "value": "31%",
+      "description": "Beneficiarios que pasan del apoyo alimentario a cursos."
+    }
+  ]
+}

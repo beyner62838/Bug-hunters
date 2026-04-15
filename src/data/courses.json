@@ -1,0 +1,57 @@
+[
+  {
+    "id": "course-01",
+    "name": "Manipulación segura de alimentos",
+    "duration": "6 horas",
+    "modality": "Virtual guiada",
+    "level": "Básico",
+    "category": "Operación",
+    "description": "Buenas prácticas para almacenamiento, transporte y entrega responsable en redes solidarias.",
+    "availability": "Abierta",
+    "enrolledCount": 48
+  },
+  {
+    "id": "course-02",
+    "name": "Habilidades digitales para empleabilidad",
+    "duration": "8 horas",
+    "modality": "Mixta",
+    "level": "Inicial",
+    "category": "Empleabilidad",
+    "description": "Uso de herramientas básicas para comunicación, búsqueda de empleo y organización personal.",
+    "availability": "Abierta",
+    "enrolledCount": 61
+  },
+  {
+    "id": "course-03",
+    "name": "Servicio al cliente en comercio local",
+    "duration": "5 horas",
+    "modality": "Presencial",
+    "level": "Básico",
+    "category": "Comercio",
+    "description": "Entrenamiento en atención, ventas asistidas y resolución amable de situaciones frecuentes.",
+    "availability": "Cupos limitados",
+    "enrolledCount": 32
+  },
+  {
+    "id": "course-04",
+    "name": "Logística de última milla comunitaria",
+    "duration": "7 horas",
+    "modality": "Mixta",
+    "level": "Intermedio",
+    "category": "Logística",
+    "description": "Planeación de rutas, coordinación con aliados y trazabilidad para entregas urbanas.",
+    "availability": "Abierta",
+    "enrolledCount": 24
+  },
+  {
+    "id": "course-05",
+    "name": "Finanzas personales para nuevos ingresos",
+    "duration": "4 horas",
+    "modality": "Virtual",
+    "level": "Básico",
+    "category": "Bienestar",
+    "description": "Herramientas simples para ahorro, presupuesto y metas económicas familiares.",
+    "availability": "Abierta",
+    "enrolledCount": 55
+  }
+]

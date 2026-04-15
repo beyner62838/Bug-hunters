@@ -1,0 +1,89 @@
+[
+  {
+    "id": "company-01",
+    "name": "Logística Verde Huila",
+    "sector": "Logística",
+    "location": "Neiva",
+    "impactLine": "Distribución urbana sostenible",
+    "vacancies": [
+      {
+        "id": "vacancy-01",
+        "title": "Auxiliar de ruta",
+        "mode": "Tiempo completo",
+        "profiles": ["Conducción urbana", "Puntualidad", "Trabajo en equipo"]
+      },
+      {
+        "id": "vacancy-02",
+        "title": "Operador de bodega",
+        "mode": "Turnos",
+        "profiles": ["Inventario", "Carga ligera", "Orden operacional"]
+      }
+    ]
+  },
+  {
+    "id": "company-02",
+    "name": "Mercado Humano",
+    "sector": "Retail",
+    "location": "Neiva",
+    "impactLine": "Comercio inclusivo",
+    "vacancies": [
+      {
+        "id": "vacancy-03",
+        "title": "Asesor de punto",
+        "mode": "Medio tiempo",
+        "profiles": ["Servicio al cliente", "Caja básica", "Atención comercial"]
+      }
+    ]
+  },
+  {
+    "id": "company-03",
+    "name": "Cocina Social SAS",
+    "sector": "Alimentos",
+    "location": "Neiva",
+    "impactLine": "Producción responsable",
+    "vacancies": [
+      {
+        "id": "vacancy-04",
+        "title": "Auxiliar de cocina",
+        "mode": "Tiempo completo",
+        "profiles": ["Manipulación de alimentos", "Mise en place", "Higiene"]
+      }
+    ]
+  },
+  {
+    "id": "company-04",
+    "name": "Talento Urbano BPO",
+    "sector": "Servicios",
+    "location": "Remoto / Neiva",
+    "impactLine": "Primer empleo",
+    "vacancies": [
+      {
+        "id": "vacancy-05",
+        "title": "Agente de soporte",
+        "mode": "Híbrido",
+        "profiles": ["Comunicación", "Digitación", "Empatía"]
+      },
+      {
+        "id": "vacancy-06",
+        "title": "Gestor de datos",
+        "mode": "Remoto",
+        "profiles": ["Excel básico", "Concentración", "Calidad de datos"]
+      }
+    ]
+  },
+  {
+    "id": "company-05",
+    "name": "ConstruRed Comunitaria",
+    "sector": "Infraestructura liviana",
+    "location": "Neiva",
+    "impactLine": "Empleo barrial",
+    "vacancies": [
+      {
+        "id": "vacancy-07",
+        "title": "Apoyo operativo",
+        "mode": "Proyecto temporal",
+        "profiles": ["Orden y limpieza", "Seguimiento de tareas", "Responsabilidad"]
+      }
+    ]
+  }
+]

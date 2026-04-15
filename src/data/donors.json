@@ -1,0 +1,68 @@
+[
+  {
+    "id": "donor-01",
+    "name": "SuperMerca Centro",
+    "type": "Supermercado",
+    "city": "Neiva",
+    "neighborhood": "Centro",
+    "address": "Carrera 5 #9-31",
+    "contact": "operaciones@supermerca.co",
+    "lat": 2.9345,
+    "lng": -75.2819
+  },
+  {
+    "id": "donor-02",
+    "name": "Panadería Aurora",
+    "type": "Panadería",
+    "city": "Neiva",
+    "neighborhood": "Altico",
+    "address": "Calle 8 #24-14",
+    "contact": "aurora@panaderias.co",
+    "lat": 2.9278,
+    "lng": -75.2684
+  },
+  {
+    "id": "donor-03",
+    "name": "Frutas del Sol",
+    "type": "Frutería",
+    "city": "Neiva",
+    "neighborhood": "Las Palmas",
+    "address": "Avenida Circunvalar #18-42",
+    "contact": "logistica@frutasdelsol.co",
+    "lat": 2.9417,
+    "lng": -75.2728
+  },
+  {
+    "id": "donor-04",
+    "name": "Restaurante La Plaza",
+    "type": "Restaurante",
+    "city": "Neiva",
+    "neighborhood": "Quirinal",
+    "address": "Carrera 7 #21-10",
+    "contact": "produccion@laplaza.co",
+    "lat": 2.9389,
+    "lng": -75.2877
+  },
+  {
+    "id": "donor-05",
+    "name": "Distribuidora Andina",
+    "type": "Distribuidor",
+    "city": "Neiva",
+    "neighborhood": "Surabastos",
+    "address": "Vía al Sur #3-61",
+    "contact": "control@andina.com",
+    "lat": 2.9121,
+    "lng": -75.3004
+  },
+  {
+    "id": "donor-06",
+    "name": "Tienda Barrio Vivo",
+    "type": "Tienda",
+    "city": "Neiva",
+    "neighborhood": "Cándido",
+    "address": "Calle 19 #6-52",
+    "contact": "gestion@barriovivo.co",
+    "lat": 2.9463,
+    "lng": -75.2851
+  }
+]

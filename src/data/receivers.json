@@ -1,0 +1,67 @@
+[
+  {
+    "id": "receiver-01",
+    "name": "Fundación Manos del Sur",
+    "type": "Fundación",
+    "leader": "Sandra Téllez",
+    "beneficiaries": 140,
+    "address": "Comuna 6, barrio Timanco",
+    "neighborhood": "Timanco",
+    "priorityLevel": "alta",
+    "lat": 2.9204,
+    "lng": -75.2948,
+    "needs": ["Verduras", "Preparados", "Panadería"]
+  },
+  {
+    "id": "receiver-02",
+    "name": "Red Comunitaria Oasis",
+    "type": "Junta Comunitaria",
+    "leader": "Jhon Perdomo",
+    "beneficiaries": 96,
+    "address": "Barrio Las Granjas",
+    "neighborhood": "Las Granjas",
+    "priorityLevel": "media",
+    "lat": 2.9454,
+    "lng": -75.2742,
+    "needs": ["Frutas", "Abarrotes", "Lácteos"]
+  },
+  {
+    "id": "receiver-03",
+    "name": "Comedor Santa Isabel",
+    "type": "Comedor comunitario",
+    "leader": "Martha Rojas",
+    "beneficiaries": 180,
+    "address": "Barrio Santa Isabel",
+    "neighborhood": "Santa Isabel",
+    "priorityLevel": "alta",
+    "lat": 2.9351,
+    "lng": -75.2991,
+    "needs": ["Preparados", "Panadería", "Verduras"]
+  },
+  {
+    "id": "receiver-04",
+    "name": "Semillas de Futuro",
+    "type": "Asociación",
+    "leader": "Liliana Cuéllar",
+    "beneficiaries": 72,
+    "address": "Barrio Canaima",
+    "neighborhood": "Canaima",
+    "priorityLevel": "media",
+    "lat": 2.9489,
+    "lng": -75.2862,
+    "needs": ["Frutas", "Abarrotes", "Lácteos"]
+  },
+  {
+    "id": "receiver-05",
+    "name": "Líderes por la Comuna 10",
+    "type": "Liderazgo barrial",
+    "leader": "Camilo Trujillo",
+    "beneficiaries": 58,
+    "address": "Barrio Cándido",
+    "neighborhood": "Cándido",
+    "priorityLevel": "baja",
+    "lat": 2.9472,
+    "lng": -75.2896,
+    "needs": ["Abarrotes", "Panadería"]
+  }
+]

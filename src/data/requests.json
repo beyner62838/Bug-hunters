@@ -1,0 +1,54 @@
+[
+  {
+    "id": "request-01",
+    "donationId": "donation-02",
+    "receiverId": "receiver-03",
+    "receiverName": "Comedor Santa Isabel",
+    "quantity": 65,
+    "priority": "alta",
+    "status": "under_review",
+    "requestedAt": "2026-04-15T08:15:00.000Z",
+    "assignedAt": null,
+    "deliveredAt": null,
+    "notes": "Validando capacidad de retiro antes del mediodía."
+  },
+  {
+    "id": "request-02",
+    "donationId": "donation-03",
+    "receiverId": "receiver-02",
+    "receiverName": "Red Comunitaria Oasis",
+    "quantity": 90,
+    "priority": "media",
+    "status": "assigned",
+    "requestedAt": "2026-04-13T12:30:00.000Z",
+    "assignedAt": "2026-04-13T14:10:00.000Z",
+    "deliveredAt": null,
+    "notes": "Retiro programado con vehículo solidario."
+  },
+  {
+    "id": "request-03",
+    "donationId": "donation-04",
+    "receiverId": "receiver-01",
+    "receiverName": "Fundación Manos del Sur",
+    "quantity": 48,
+    "priority": "alta",
+    "status": "in_route",
+    "requestedAt": "2026-04-15T10:20:00.000Z",
+    "assignedAt": "2026-04-15T10:45:00.000Z",
+    "deliveredAt": null,
+    "notes": "Ruta activa con tiempo estimado de 20 minutos."
+  },
+  {
+    "id": "request-04",
+    "donationId": "donation-06",
+    "receiverId": "receiver-05",
+    "receiverName": "Líderes por la Comuna 10",
+    "quantity": 35,
+    "priority": "baja",
+    "status": "delivered",
+    "requestedAt": "2026-04-11T15:00:00.000Z",
+    "assignedAt": "2026-04-11T16:10:00.000Z",
+    "deliveredAt": "2026-04-11T18:00:00.000Z",
+    "notes": "Entrega cerrada con verificación comunitaria."
+  }
+]
