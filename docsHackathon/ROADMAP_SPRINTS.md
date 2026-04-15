@@ -1,6 +1,6 @@
 # Roadmap de Implementación - Sprint Planning
 
-## 📅 Visión General
+##  Visión General
 
 **Duración total:** 3-4 días de desarrollo dedicado  
 **Team recomendado:** 1-2 desarrolladores frontend + 1 designer (opcional)  
@@ -9,7 +9,7 @@
 
 ---
 
-## 🗓️ Plan de Sprints
+##  Plan de Sprints
 
 ### SPRINT 0: Setup & Preparación (2-3 horas)
 
@@ -24,11 +24,11 @@
 - [ ] Setup eslint + prettier (opcional)
 
 #### Deliverable
-✅ Proyecto base listo para desarrollo  
-✅ `npm run dev` funciona sin errores
+ Proyecto base listo para desarrollo  
+ `npm run dev` funciona sin errores
 
 #### Tiempo estimado
-⏱️ 2-3 horas (1 dev)
+ 2-3 horas (1 dev)
 
 ---
 
@@ -45,13 +45,13 @@
 - [ ] Setup LocalStorage para autenticación
 
 #### Deliverable
-✅ Sistema autenticación funcional  
-✅ 3 roles diferenciados  
-✅ Datos persisten en LocalStorage  
-✅ Navegación entre vistas
+ Sistema autenticación funcional  
+ 3 roles diferenciados  
+ Datos persisten en LocalStorage  
+ Navegación entre vistas
 
 #### Tiempo estimado
-⏱️ 4 horas (1 dev)
+ 4 horas (1 dev)
 
 ---
 
@@ -71,13 +71,13 @@
 - [ ] Estilos con Tailwind
 
 #### Deliverable
-✅ Donante puede publicar alimentos  
-✅ Historial visible  
-✅ Datos persisten  
-✅ Interfaz responsive
+ Donante puede publicar alimentos  
+ Historial visible  
+ Datos persisten  
+ Interfaz responsive
 
 #### Tiempo estimado
-⏱️ 5 horas (1-2 devs)
+ 5 horas (1-2 devs)
 
 ---
 
@@ -98,13 +98,13 @@
 - [ ] Lógica: Asignación automática de alimentos al receptor
 
 #### Deliverable
-✅ Receptor ve alimentos disponibles  
-✅ Puede solicitar ayuda  
-✅ Sistema asigna automáticamente  
-✅ Historial de solicitudes
+ Receptor ve alimentos disponibles  
+ Puede solicitar ayuda  
+ Sistema asigna automáticamente  
+ Historial de solicitudes
 
 #### Tiempo estimado
-⏱️ 5 horas (1-2 devs)
+ 5 horas (1-2 devs)
 
 ---
 
@@ -128,13 +128,13 @@
   - [ ] Lista de reportes
 
 #### Deliverable
-✅ Dashboard administrativo completo  
-✅ Métricas actualizadas en tiempo real  
-✅ Reportes visuales  
-✅ Trazabilidad completa
+ Dashboard administrativo completo  
+ Métricas actualizadas en tiempo real  
+ Reportes visuales  
+ Trazabilidad completa
 
 #### Tiempo estimado
-⏱️ 4 horas (1-2 devs)
+ 4 horas (1-2 devs)
 
 ---
 
@@ -156,13 +156,13 @@
 - [ ] Crear componente `LegendPanel.vue`
 
 #### Deliverable
-✅ Mapa interactivo funcional  
-✅ Múltiples capas  
-✅ Filtros activos  
-✅ Vista responsive
+ Mapa interactivo funcional  
+ Múltiples capas  
+ Filtros activos  
+ Vista responsive
 
 #### Tiempo estimado
-⏱️ 3 horas (1 dev)
+ 3 horas (1 dev)
 
 ---
 
@@ -184,13 +184,13 @@
 - [ ] Lógica de inscripción en localStorage
 
 #### Deliverable
-✅ Catálogo de cursos funcional  
-✅ Detalle de cursos con contenido  
-✅ Sistema de inscripción  
-✅ Progreso del usuario persistente
+ Catálogo de cursos funcional  
+ Detalle de cursos con contenido  
+ Sistema de inscripción  
+ Progreso del usuario persistente
 
 #### Tiempo estimado
-⏱️ 3 horas (1-2 devs)
+ 3 horas (1-2 devs)
 
 ---
 
@@ -208,13 +208,13 @@
 - [ ] MockUp de OrgDetailView (modal básico)
 
 #### Deliverable
-✅ Directorio de organizaciones  
-✅ Alianzas visibilizadas  
-✅ Empleos listados  
-✅ Contacto disponible
+ Directorio de organizaciones  
+ Alianzas visibilizadas  
+ Empleos listados  
+ Contacto disponible
 
 #### Tiempo estimado
-⏱️ 2 horas (1 dev)
+ 2 horas (1 dev)
 
 ---
 
@@ -234,12 +234,11 @@
 - [ ] Crear utilidades de estilos (Tailwind constants)
 
 #### Deliverable
-✅ Biblioteca de componentes  
-✅ Consistencia visual  
-✅ Reutilización facilitada
-
+ Biblioteca de componentes  
+ Consistencia visual  
+ Reutilización facilitada
 #### Tiempo estimado
-⏱️ 2 horas (1 dev)
+ 2 horas (1 dev)
 
 ---
 
@@ -258,13 +257,13 @@
 - [ ] Testing de flujos completos
 
 #### Deliverable
-✅ Aplicación responsiva  
-✅ Accesible  
-✅ Pulida visualmente  
-✅ Sin warnings críticos
+ Aplicación responsiva  
+ Accesible  
+ Pulida visualmente  
+ Sin warnings críticos
 
 #### Tiempo estimado
-⏱️ 2 horas (1-2 devs)
+ 2 horas (1-2 devs)
 
 ---
 
@@ -286,13 +285,13 @@
 - [ ] Fix bugs encontrados
 
 #### Deliverable
-✅ Todos los flujos sin errores  
-✅ Performance aceptable  
-✅ Responsividad validada  
-✅ Lista para presentar
+ Todos los flujos sin errores  
+ Performance aceptable  
+ Responsividad validada  
+ Lista para presentar
 
 #### Tiempo estimado
-⏱️ 1.5 horas (1 QA dev)
+ 1.5 horas (1 QA dev)
 
 ---
 
@@ -311,17 +310,17 @@
 - [ ] Grabar demostración en video (opcional)
 
 #### Deliverable
-✅ App en vivo y accesible  
-✅ Documentación lista  
-✅ Credenciales resguardadas  
-✅ URL compartible
+ App en vivo y accesible  
+ Documentación lista  
+ Credenciales resguardadas  
+ URL compartible
 
 #### Tiempo estimado
-⏱️ 1 hora (1 dev)
+ 1 hora (1 dev)
 
 ---
 
-## ⏲️ Resumen de Tiempos
+## Resumen de Tiempos
 
 | Sprint | Tarea | Horas | Dev(s) |
 |--------|-------|-------|--------|
@@ -339,7 +338,7 @@
 | 11 | Deploy | 1 | 1 |
 | **TOTAL** | | **35 horas** | **1-2 devs** |
 
-### 📊 Escenarios de Tiempo
+###  Escenarios de Tiempo
 
 **Escenario 1: 1 Developer Dedicado**
 - 35 horas de trabajo = 5 días (8 horas/día)
@@ -359,33 +358,33 @@
 
 ---
 
-## 🎯 Prioridades por Sprint
+##  Prioridades por Sprint
 
-### 🔴 CRÍTICOS (DEBEN estar 100%)
+###  CRÍTICOS (DEBEN estar 100%)
 - Sprint 0: Setup
 - Sprint 1: Auth (roles + guards)
 - Sprint 2: Flujo Donante completo
 - Sprint 3: Flujo Receptor + órdenes
 - Sprint 4: Admin Dashboard
 
-### 🟠 ALTOS (DEBEN estar 80%+)
+### ALTOS (DEBEN estar 80%+)
 - Sprint 5: Mapa (al menos funcional, puede faltar styling)
 - Sprint 6: Cursos (al menos grid + detail básico)
 - Sprint 9: Responsividad (especialmente mobile)
 
-### 🟡 MEDIOS (PUEDEN estar 60%+)
+###  MEDIOS (PUEDEN estar 60%+)
 - Sprint 7: Orgs (funcional, diseño secundario)
 - Sprint 8: Componentes (reutilización)
 - Sprint 10: Testing (lo básico)
 
-### 🟢 BAJOS (NICE-TO-HAVE)
+###  BAJOS (NICE-TO-HAVE)
 - Video de demo
 - Análisis detallado de performance
 - Temas alternativos
 
 ---
 
-## 📋 Dependency Graph
+##  Dependency Graph
 
 ```
 Sprint 0 (Setup)
@@ -412,7 +411,7 @@ Sprint 11 (Deploy)
 
 ---
 
-## 🚨 Riesgos & Mitigaciones
+##  Riesgos & Mitigaciones
 
 ### Riesgo 1: Alcance demasiado ambicioso
 **Mitigación:** Mantener Sprints 2-4 como bloqueadores. Si se atrasan, cancelar Sprints 7 (Orgs) inmediatamente.
@@ -431,49 +430,49 @@ Sprint 11 (Deploy)
 
 ---
 
-## ✅ Daily Standup Template
+##  Daily Standup Template
 
 ```
-🎯 Qué hiciste hoy:
+ Qué hiciste hoy:
 - [Task x] completada 100%
 - [Task y] en progreso 70%
 
-🚧 Qué harás mañana:
+ Qué harás mañana:
 - [Task y] terminar
 - [Task z] comenzar
 
-🚨 Bloqueadores:
+ Bloqueadores:
 - Ninguno | [Describir]
 
-📊 Progreso Sprint:
+ Progreso Sprint:
 - X horas gastadas / Y horas estimadas
 ```
 
 ---
 
-## 🏁 Definición de "Listo para Demo"
+##  Definición de "Listo para Demo"
 
-✅ **Sprint 2-4 Completados al 100%**
+ **Sprint 2-4 Completados al 100%**
 - Flujo A funciona end-to-end
 - Sin errores JS críticos
 - Datos persisten
 
-✅ **Sprint 9 Completado al 90%**
+ **Sprint 9 Completado al 90%**
 - Responsive en mobile
 - Sin layout breaks
 
-✅ **Sprint 10 Sampling**
+ **Sprint 10 Sampling**
 - Flujos A, B, C validados manualmente
 - Screenshots listos
 
-✅ **Sprint 11**
+ **Sprint 11**
 - URL publica disponible
 - No requiere setup local
 - Credenciales de demo documentadas
 
 ---
 
-## 📸 Pre-Demo Checklist (24hs antes)
+##  Pre-Demo Checklist (24hs antes)
 
 - [ ] Limpia LocalStorage en navegador
 - [ ] App carga sin errores en console
@@ -494,18 +493,18 @@ Sprint 11 (Deploy)
 - [ ] URL es pública y accesible → OK
 - [ ] Recarga página → datos persisten → OK
 
-**Si todo OK → ✅ Listo para demo**
+**Si todo OK →  Listo para demo**
 
 ---
 
-## 🎉 Éxito Esperado
+## Éxito Esperado
 
 Con este plan:
-- ✅ 35 horas máximo de desarrollo
-- ✅ 2-3 devs pueden completarlo en 2-3 días
-- ✅ Demo de 20 minutos sin hilos sueltos
-- ✅ Validación completa del concepto
-- ✅ Arquitectura escalable a backend (fase 2)
+-  35 horas máximo de desarrollo
+-  2-3 devs pueden completarlo en 2-3 días
+-  Demo de 20 minutos sin hilos sueltos
+-  Validación completa del concepto
+-  Arquitectura escalable a backend (fase 2)
 
-**Hackathon ganada. Siguiente fase: Backend + Base de Datos.** 🚀
+
 
