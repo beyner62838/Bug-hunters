@@ -40,9 +40,16 @@ const displayValue = computed(() =>
 <template>
   <article class="panel-surface overflow-hidden p-5">
     <div
-      class="mb-4 h-14 w-14 rounded-2xl bg-gradient-to-br"
+      class="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br text-white"
       :class="accentMap[props.accent] ?? accentMap.brand"
-    ></div>
+    >
+      <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-white/15">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+          <path d="M12 4v16" />
+          <path d="M4 12h16" />
+        </svg>
+      </span>
+    </div>
     <p class="text-sm font-medium text-slate-500">{{ props.title }}</p>
     <p class="mt-2 font-display text-3xl font-semibold tracking-tight text-slate-950">
       {{ displayValue }}
