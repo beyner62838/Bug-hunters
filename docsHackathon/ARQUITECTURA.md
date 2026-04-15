@@ -74,7 +74,6 @@
 ### 3.2 Capa de Estado (Pinia Stores)
 
 ```javascript
-// Estructura de Stores recomendada
 
 1. authStore
    - currentUser
@@ -269,17 +268,17 @@ src/
 
 ## 8. Criterios de Éxito de la Demo
 
-✅ **Funcional:**
+- **Funcional:**
 - Navegación fluida entre todos los módulos
 - Transiciones suave entre estados
 - Datos persisten en LocalStorage
 
-✅ **Visual:**
+- **Visual:**
 - Diseño consistente y profesional
 - Responsive design (mobile-first)
 - Identidad visual clara
 
-✅ **Demostrativo:**
+- **Demostrativo:**
 - Se puede simular un flujo completo: donación → asignación → entrega → educación
 - Mapa interactivo con datos visuales
 - Panel admin muestra trazabilidad en tiempo real
