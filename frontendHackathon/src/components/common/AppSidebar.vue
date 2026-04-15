@@ -91,16 +91,23 @@ async function handleLogout() {
     ></div>
 
     <aside
-      class="fixed inset-y-0 left-0 z-40 flex w-80 max-w-[86vw] flex-col border-r border-red-100 bg-white px-5 py-6 text-slate-900 shadow-2xl transition duration-300 lg:sticky lg:max-w-none"
+      class="fixed inset-y-0 left-0 z-40 flex w-80 max-w-[86vw] flex-col border-r border-slate-200 bg-slate-100 px-5 py-6 text-slate-900 shadow-2xl transition duration-300 lg:sticky lg:max-w-none"
       :class="drawerClasses"
     >
       <RouterLink to="/" class="mb-8 flex items-center gap-3" @click="closeSidebar">
-        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-600 font-display text-lg font-bold text-white">
-          RA
+        <div class="flex h-12 w-12 items-center justify-center rounded-3xl bg-red-600 font-display text-lg font-bold text-white shadow-sm">
+          <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="11" r="6" fill="#ff1919" />
+            <path d="M15 5.5c0 1.38-1.12 2.5-2.5 2.5S10 6.88 10 5.5" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round" />
+            <path d="M13.5 2.5c.5.2.9.7 1 1.3" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round" />
+            <path d="M16 3.5c0 .83-.67 1.5-1.5 1.5" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round" />
+            <path d="M8.5 17c.6 1.2 2.2 1.4 3.4.8 1.3-.6 1.8-2.1 1.2-3.4-.6-1.3-2.1-1.8-3.4-1.2-1.3.6-1.8 2.1-1.2 3.4Z" fill="#f0c1a0" />
+            <path d="M9 15.2c1.1.5 2.4.2 3.1-.8" stroke="#1a1a1a" stroke-width="1.2" stroke-linecap="round" />
+          </svg>
         </div>
         <div>
           <p class="font-display text-xl font-semibold tracking-tight text-slate-950">RedAlimenta</p>
-          <p class="text-sm text-slate-500">Hackathon social urbana</p>
+          <p class="text-sm text-slate-600">Hackathon social urbana</p>
         </div>
       </RouterLink>
 
@@ -154,15 +161,15 @@ async function handleLogout() {
       </nav>
 
       <div class="mt-6 space-y-3">
-        <div class="rounded-3xl border border-red-200 bg-red-50 p-4">
-          <p class="text-sm font-semibold text-red-900">Demo con experiencia por rol</p>
-          <p class="mt-1 text-sm text-red-800">
+        <div class="rounded-3xl border border-slate-200 bg-white p-4 shadow-sm">
+          <p class="text-sm font-semibold text-red-700">Demo con experiencia por rol</p>
+          <p class="mt-1 text-sm text-slate-700">
             Navegación, permisos y acciones cambian según el perfil autenticado.
           </p>
         </div>
         <button
           type="button"
-          class="w-full rounded-2xl border border-slate-300 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:border-red-400 hover:bg-red-50 hover:text-red-700"
+          class="w-full rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700 transition hover:border-red-300 hover:bg-red-100"
           @click="handleLogout"
         >
           Cerrar sesión
