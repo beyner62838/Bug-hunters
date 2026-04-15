@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import AppHeader from '@/components/common/AppHeader.vue'
 import AppSidebar from '@/components/common/AppSidebar.vue'
@@ -16,6 +16,13 @@ function toggleSidebar() {
 function closeSidebar() {
   isSidebarOpen.value = false
 }
+
+watch(
+  () => route.fullPath,
+  () => {
+    closeSidebar()
+  }
+)
 </script>
 
 <template>

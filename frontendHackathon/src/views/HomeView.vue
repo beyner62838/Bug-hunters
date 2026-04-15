@@ -1,9 +1,31 @@
 <script setup>
+import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import StatCard from '@/components/common/StatCard.vue'
+import { useAuthStore } from '@/stores/authStore'
 import { useDashboardStore } from '@/stores/dashboardStore'
 
+const authStore = useAuthStore()
 const dashboardStore = useDashboardStore()
+
+const primaryLinks = computed(() =>
+  authStore.role === 'beneficiary'
+    ? [
+        { to: '/training', label: 'Explorar cursos', style: 'primary' },
+        { to: '/companies', label: 'Ver vacantes', style: 'outline' }
+      ]
+    : [
+        { to: '/dashboard', label: 'Explorar dashboard', style: 'primary' },
+        { to: '/donations/new', label: 'Registrar donación', style: 'outline' },
+        { to: '/training', label: 'Ver formación', style: 'outline-ocean' }
+      ]
+)
+
+const impactNarrative = computed(() =>
+  authStore.role === 'beneficiary'
+    ? 'Tu perfil está orientado a formación y empleabilidad: puedes recorrer cursos, registrar tu interés y postularte a vacantes aliadas.'
+    : 'Tu perfil donante tiene acceso al circuito completo: publicación de lotes, solicitudes, distribución, trazabilidad y analítica básica.'
+)
 </script>
 
 <template>
@@ -12,7 +34,7 @@ const dashboardStore = useDashboardStore()
       <div class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
         <div>
           <div class="inline-flex rounded-full border border-brand-100 bg-brand-50 px-4 py-2 text-sm font-semibold text-brand-800">
-            Hackathon universitaria · MVP de alta fidelidad
+            {{ authStore.roleLabel }} · {{ authStore.currentUser?.organization }}
           </div>
           <h1 class="mt-5 max-w-3xl font-display text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
             {{ dashboardStore.homeContent.projectName }}
@@ -24,24 +46,21 @@ const dashboardStore = useDashboardStore()
             {{ dashboardStore.homeContent.heroDescription }}
           </p>
 
-          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <RouterLink
-              to="/dashboard"
-              class="inline-flex items-center justify-center rounded-2xl bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-700"
+              v-for="link in primaryLinks"
+              :key="link.to"
+              :to="link.to"
+              class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold transition"
+              :class="
+                link.style === 'primary'
+                  ? 'bg-slate-950 text-white hover:bg-brand-700'
+                  : link.style === 'outline-ocean'
+                    ? 'border border-slate-300 bg-white text-slate-700 hover:border-ocean-300 hover:text-ocean-700'
+                    : 'border border-slate-300 bg-white text-slate-700 hover:border-brand-300 hover:text-brand-700'
+              "
             >
-              Explorar dashboard
-            </RouterLink>
-            <RouterLink
-              to="/donations/new"
-              class="inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-brand-300 hover:text-brand-700"
-            >
-              Registrar donación
-            </RouterLink>
-            <RouterLink
-              to="/training"
-              class="inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-ocean-300 hover:text-ocean-700"
-            >
-              Ver formación
+              {{ link.label }}
             </RouterLink>
           </div>
         </div>
@@ -78,12 +97,12 @@ const dashboardStore = useDashboardStore()
 
     <section class="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
       <article class="panel-surface p-6 sm:p-7">
-        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700">Impacto</p>
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700">Experiencia por rol</p>
         <h2 class="mt-3 font-display text-3xl font-semibold text-slate-950">
-          Un sistema que responde hoy y abre oportunidades mañana
+          Una misma plataforma, recorridos diferentes
         </h2>
         <p class="mt-4 max-w-2xl text-base leading-7 text-slate-600">
-          RedAlimenta combina gestión operativa de alimentos con trayectorias de formación y conexión a empresas aliadas, para atacar la urgencia alimentaria sin perder de vista la movilidad social.
+          {{ impactNarrative }}
         </p>
 
         <div class="mt-8 grid gap-4 sm:grid-cols-3">

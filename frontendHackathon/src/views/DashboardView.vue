@@ -4,17 +4,20 @@ import { RouterLink } from 'vue-router'
 import DataTable from '@/components/common/DataTable.vue'
 import StatCard from '@/components/common/StatCard.vue'
 import StatusBadge from '@/components/common/StatusBadge.vue'
+import { useAuthStore } from '@/stores/authStore'
 import { useDashboardStore } from '@/stores/dashboardStore'
 import { useDonationStore } from '@/stores/donationStore'
 import { useRequestStore } from '@/stores/requestStore'
 import { formatDate } from '@/utils/formatters'
 
+const authStore = useAuthStore()
 const dashboardStore = useDashboardStore()
 const donationStore = useDonationStore()
 const requestStore = useRequestStore()
 
 const recentDonations = computed(() => donationStore.donations.slice(0, 5))
 const recentRequests = computed(() => requestStore.enrichedRequests.slice(0, 5))
+const isBeneficiary = computed(() => authStore.role === 'beneficiary')
 
 const requestColumns = [
   { key: 'receiverName', label: 'Organización' },
@@ -39,7 +42,7 @@ const requestColumns = [
       />
     </section>
 
-    <section class="grid gap-6 xl:grid-cols-[1.15fr_0.85fr]">
+    <section v-if="!isBeneficiary" class="grid gap-6 xl:grid-cols-[1.15fr_0.85fr]">
       <article class="panel-surface p-6">
         <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
@@ -97,6 +100,62 @@ const requestColumns = [
       </article>
     </section>
 
+    <section v-else class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+      <article class="panel-surface p-6">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700">
+          Ruta personal
+        </p>
+        <h2 class="mt-2 section-title">Tu recorrido dentro de la plataforma</h2>
+        <div class="mt-6 grid gap-4 sm:grid-cols-3">
+          <div class="rounded-3xl bg-brand-50 p-5">
+            <p class="text-sm font-semibold text-brand-800">1. Formación</p>
+            <p class="mt-2 text-sm leading-6 text-brand-900">
+              Revisa el catálogo y activa tu inscripción en los cursos base.
+            </p>
+          </div>
+          <div class="rounded-3xl bg-ocean-50 p-5">
+            <p class="text-sm font-semibold text-ocean-800">2. Preparación</p>
+            <p class="mt-2 text-sm leading-6 text-ocean-900">
+              Identifica habilidades útiles para logística, atención o soporte.
+            </p>
+          </div>
+          <div class="rounded-3xl bg-slate-50 p-5">
+            <p class="text-sm font-semibold text-slate-800">3. Postulación</p>
+            <p class="mt-2 text-sm leading-6 text-slate-700">
+              Navega empresas aliadas y envía tu interés a las vacantes disponibles.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel-surface p-6">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-ocean-700">
+          Próximos pasos
+        </p>
+        <h2 class="mt-2 section-title">Acciones sugeridas</h2>
+        <div class="mt-6 space-y-4">
+          <RouterLink
+            to="/training"
+            class="block rounded-3xl border border-slate-200 bg-white p-5 transition hover:border-brand-300"
+          >
+            <p class="font-semibold text-slate-950">Ir a cursos</p>
+            <p class="mt-2 text-sm leading-6 text-slate-600">
+              Inscríbete en formación básica y fortalece tu perfil.
+            </p>
+          </RouterLink>
+          <RouterLink
+            to="/companies"
+            class="block rounded-3xl border border-slate-200 bg-white p-5 transition hover:border-ocean-300"
+          >
+            <p class="font-semibold text-slate-950">Explorar vacantes</p>
+            <p class="mt-2 text-sm leading-6 text-slate-600">
+              Busca oportunidades alineadas con tus nuevas habilidades.
+            </p>
+          </RouterLink>
+        </div>
+      </article>
+    </section>
+
     <section class="grid gap-6 lg:grid-cols-2">
       <article class="panel-surface p-6">
         <div class="flex items-center justify-between gap-4">
@@ -106,7 +165,7 @@ const requestColumns = [
             </p>
             <h2 class="mt-2 section-title">Lotes visibles en la red</h2>
           </div>
-          <RouterLink to="/donations" class="text-sm font-semibold text-brand-700">
+          <RouterLink v-if="!isBeneficiary" to="/donations" class="text-sm font-semibold text-brand-700">
             Ver todo
           </RouterLink>
         </div>
@@ -137,35 +196,47 @@ const requestColumns = [
         <p class="text-sm font-semibold uppercase tracking-[0.18em] text-ocean-700">
           Próximos pasos
         </p>
-        <h2 class="mt-2 section-title">Flujos listos para demo</h2>
+        <h2 class="mt-2 section-title">{{ isBeneficiary ? 'Ruta de inclusión' : 'Flujos listos para demo' }}</h2>
 
         <div class="mt-6 space-y-4">
           <div class="rounded-3xl bg-brand-50 p-5">
-            <p class="text-sm font-semibold text-brand-800">Flujo 1 · Donación a trazabilidad</p>
+            <p class="text-sm font-semibold text-brand-800">
+              {{ isBeneficiary ? 'Cursos para arrancar' : 'Flujo 1 · Donación a trazabilidad' }}
+            </p>
             <p class="mt-2 text-sm leading-6 text-brand-900">
-              Publica un lote, solicítalo desde receptores, avanza su estado y verifica el registro final en trazabilidad.
+              {{
+                isBeneficiary
+                  ? 'Inicia por los cursos de manipulación, habilidades digitales o logística básica.'
+                  : 'Publica un lote, solicítalo desde receptores, avanza su estado y verifica el registro final en trazabilidad.'
+              }}
             </p>
           </div>
           <div class="rounded-3xl bg-ocean-50 p-5">
-            <p class="text-sm font-semibold text-ocean-800">Flujo 2 · Formación a empleo</p>
+            <p class="text-sm font-semibold text-ocean-800">
+              {{ isBeneficiary ? 'Salida laboral' : 'Flujo 2 · Formación a empleo' }}
+            </p>
             <p class="mt-2 text-sm leading-6 text-ocean-900">
-              Inscribe a una persona en cursos básicos y postúlala a una vacante aliada desde el mismo ecosistema.
+              {{
+                isBeneficiary
+                  ? 'Después de inscribirte, explora empresas aliadas y simula tu postulación.'
+                  : 'Inscribe a una persona en cursos básicos y postúlala a una vacante aliada desde el mismo ecosistema.'
+              }}
             </p>
           </div>
         </div>
 
         <div class="mt-6 grid gap-3 sm:grid-cols-2">
           <RouterLink
-            to="/receivers"
+            :to="isBeneficiary ? '/training' : '/receivers'"
             class="rounded-2xl border border-slate-300 px-4 py-3 text-center text-sm font-semibold text-slate-700 transition hover:border-brand-300 hover:text-brand-700"
           >
-            Solicitar alimentos
+            {{ isBeneficiary ? 'Ir a cursos' : 'Solicitar alimentos' }}
           </RouterLink>
           <RouterLink
             to="/companies"
             class="rounded-2xl border border-slate-300 px-4 py-3 text-center text-sm font-semibold text-slate-700 transition hover:border-ocean-300 hover:text-ocean-700"
           >
-            Revisar vacantes
+            {{ isBeneficiary ? 'Ver vacantes' : 'Revisar vacantes' }}
           </RouterLink>
         </div>
       </article>

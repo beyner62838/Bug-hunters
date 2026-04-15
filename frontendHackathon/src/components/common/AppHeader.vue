@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
-import { RouterLink, useRoute } from 'vue-router'
+import { RouterLink, useRoute, useRouter } from 'vue-router'
+import { useAuthStore } from '@/stores/authStore'
 
 const props = defineProps({
   title: {
@@ -12,14 +13,37 @@ const props = defineProps({
 defineEmits(['toggle-sidebar'])
 
 const route = useRoute()
+const router = useRouter()
+const authStore = useAuthStore()
 
 const contextualText = computed(() => {
+  if (authStore.role === 'beneficiary') {
+    return 'Ruta de formación, inscripción y postulación laboral'
+  }
+
   if (route.name === 'home') {
     return 'Red de redistribución alimentaria y oportunidades productivas'
   }
 
   return 'MVP navegable para operación, impacto y empleabilidad'
 })
+
+const primaryAction = computed(() =>
+  authStore.role === 'beneficiary'
+    ? {
+        to: '/training',
+        label: 'Explorar cursos'
+      }
+    : {
+        to: '/donations/new',
+        label: 'Publicar lote'
+      }
+)
+
+async function handleLogout() {
+  authStore.logout()
+  await router.push({ name: 'login' })
+}
 </script>
 
 <template>
@@ -46,14 +70,24 @@ const contextualText = computed(() => {
 
       <div class="hidden items-center gap-3 sm:flex">
         <div class="rounded-full border border-brand-100 bg-brand-50 px-4 py-2 text-sm font-medium text-brand-800">
-          Demo universitaria
+          {{ authStore.roleLabel }}
+        </div>
+        <div class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700">
+          {{ authStore.currentUser?.name }}
         </div>
         <RouterLink
-          to="/donations/new"
+          :to="primaryAction.to"
           class="inline-flex items-center rounded-full bg-slate-950 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700"
         >
-          Publicar lote
+          {{ primaryAction.label }}
         </RouterLink>
+        <button
+          type="button"
+          class="inline-flex items-center rounded-full border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-rose-200 hover:text-rose-700"
+          @click="handleLogout"
+        >
+          Salir
+        </button>
       </div>
     </div>
   </header>

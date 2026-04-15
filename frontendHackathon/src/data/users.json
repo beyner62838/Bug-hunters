@@ -1,0 +1,18 @@
+[
+  {
+    "id": "user-01",
+    "name": "Valentina Gómez",
+    "email": "donante@redalimenta.demo",
+    "password": "Red2026!",
+    "role": "donor",
+    "organization": "Panadería Aurora"
+  },
+  {
+    "id": "user-02",
+    "name": "Juan David Perdomo",
+    "email": "talento@redalimenta.demo",
+    "password": "Red2026!",
+    "role": "beneficiary",
+    "organization": "Ruta de Formación Comunitaria"
+  }
+]

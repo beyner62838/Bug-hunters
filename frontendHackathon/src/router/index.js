@@ -1,5 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import pinia from '@/stores'
+import { useAuthStore } from '@/stores/authStore'
 import MainLayout from '@/layouts/MainLayout.vue'
+import LoginView from '@/views/LoginView.vue'
 import HomeView from '@/views/HomeView.vue'
 import DashboardView from '@/views/DashboardView.vue'
 import DonorsView from '@/views/DonorsView.vue'
@@ -14,15 +17,29 @@ import AdminView from '@/views/AdminView.vue'
 
 const routes = [
   {
+    path: '/login',
+    name: 'login',
+    component: LoginView,
+    meta: {
+      title: 'Acceso demo',
+      public: true,
+      guestOnly: true
+    }
+  },
+  {
     path: '/',
     component: MainLayout,
+    meta: {
+      requiresAuth: true
+    },
     children: [
       {
         path: '',
         name: 'home',
         component: HomeView,
         meta: {
-          title: 'Inicio'
+          title: 'Inicio',
+          roles: ['donor', 'beneficiary']
         }
       },
       {
@@ -30,7 +47,8 @@ const routes = [
         name: 'dashboard',
         component: DashboardView,
         meta: {
-          title: 'Dashboard'
+          title: 'Dashboard',
+          roles: ['donor', 'beneficiary']
         }
       },
       {
@@ -38,7 +56,8 @@ const routes = [
         name: 'donors',
         component: DonorsView,
         meta: {
-          title: 'Donaciones'
+          title: 'Donaciones',
+          roles: ['donor']
         }
       },
       {
@@ -46,7 +65,8 @@ const routes = [
         name: 'donation-create',
         component: DonationCreateView,
         meta: {
-          title: 'Nueva donación'
+          title: 'Nueva donación',
+          roles: ['donor']
         }
       },
       {
@@ -54,7 +74,8 @@ const routes = [
         name: 'receivers',
         component: ReceiversView,
         meta: {
-          title: 'Receptores'
+          title: 'Receptores',
+          roles: ['donor']
         }
       },
       {
@@ -62,7 +83,8 @@ const routes = [
         name: 'requests',
         component: RequestsView,
         meta: {
-          title: 'Solicitudes'
+          title: 'Solicitudes',
+          roles: ['donor']
         }
       },
       {
@@ -70,7 +92,8 @@ const routes = [
         name: 'map',
         component: MapView,
         meta: {
-          title: 'Mapa operacional'
+          title: 'Mapa operacional',
+          roles: ['donor']
         }
       },
       {
@@ -78,7 +101,8 @@ const routes = [
         name: 'traceability',
         component: TraceabilityView,
         meta: {
-          title: 'Trazabilidad'
+          title: 'Trazabilidad',
+          roles: ['donor']
         }
       },
       {
@@ -86,7 +110,8 @@ const routes = [
         name: 'training',
         component: TrainingView,
         meta: {
-          title: 'Formación'
+          title: 'Formación',
+          roles: ['donor', 'beneficiary']
         }
       },
       {
@@ -94,7 +119,8 @@ const routes = [
         name: 'companies',
         component: CompaniesView,
         meta: {
-          title: 'Empresas aliadas'
+          title: 'Empresas aliadas',
+          roles: ['donor', 'beneficiary']
         }
       },
       {
@@ -102,16 +128,48 @@ const routes = [
         name: 'admin',
         component: AdminView,
         meta: {
-          title: 'Administración'
+          title: 'Administración',
+          roles: ['donor']
         }
       }
     ]
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/'
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes
+})
+
+router.beforeEach((to) => {
+  const authStore = useAuthStore(pinia)
+
+  if (to.meta?.guestOnly && authStore.isAuthenticated) {
+    return authStore.getDefaultRoute()
+  }
+
+  if (to.meta?.public) {
+    return true
+  }
+
+  if (to.matched.some((record) => record.meta?.requiresAuth) && !authStore.isAuthenticated) {
+    return { name: 'login' }
+  }
+
+  const allowedRoles = to.meta?.roles ?? []
+  if (allowedRoles.length && !authStore.canAccess(allowedRoles)) {
+    return authStore.getDefaultRoute()
+  }
+
+  return true
+})
+
+router.afterEach((to) => {
+  document.title = to.meta?.title ? `${to.meta.title} | RedAlimenta` : 'RedAlimenta'
 })
 
 export default router
