@@ -181,14 +181,22 @@ Se gestionan mediante:
 ### 1. Clonar el repositorio
 ```bash
 git clone https://github.com/beyner62838/Bug-hunters.git
+```
+```bash
 cd Bug-hunters
 ```
 ### 2. Instalar dependencias
+```bash
 npm install
+```
 ### 3. Ejecutar en desarrollo
+```bash
 npm run dev
+```
 ### 4. Construir para producción
+```bash
 npm run build
+```
 
 ## 📊 Impacto Esperado
 - Reducción del desperdicio de alimentos
