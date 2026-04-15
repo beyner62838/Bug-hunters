@@ -472,12 +472,12 @@ Paso 3: [Admin ve en tiempo real]
 
 ###  Puntos Destacables
 
-- ✨ "Sin backend, todo en el navegador"
-- ✨ "Datos persisten entre sesiones"
-- ✨ "Flujo completo visible en tiempo real"
-- ✨ "Roles diferenciados con permisos"
-- ✨ "Reportes automáticos"
-- ✨ "Mapa interactivo con Leaflet"
+- "Sin backend, todo en el navegador"
+- "Datos persisten entre sesiones"
+- "Flujo completo visible en tiempo real"
+- "Roles diferenciados con permisos"
+- "Reportes automáticos"
+- "Mapa interactivo con Leaflet"
 
 ---
 
