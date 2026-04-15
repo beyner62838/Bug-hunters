@@ -1,6 +1,6 @@
 # FAQ - Preguntas Frecuentes sobre la Arquitectura
 
-## 📚 Índice de Preguntas
+## Índice de Preguntas
 
 1. [Decisiones de Stack](#decisiones)
 2. [Firebase/Backend](#backend)
@@ -27,7 +27,7 @@
 
 4. **Documentación:** Vue tiene excelente documentación en español. React comunidad es mayor pero más fragmentada.
 
-✅ **Veredicto:** Vue es la opción correcta para velocidad.
+ **Veredicto:** Vue es la opción correcta para velocidad.
 
 ---
 
@@ -35,13 +35,13 @@
 
 **R:** NO. Por estas razones:
 
-❌ **Nuxt agrega:**
+ **Nuxt agrega:**
 - Config adicional (nitro, nuxt.config.ts)
 - Conceptos nuevos (middleware, layouts automáticas)
 - Carpetas convencionales que confunden
 - SSR setup (innecesario para demo frontend)
 
-✅ **Para esta hackathon:** Vue + Vite es más directo.
+ **Para esta hackathon:** Vue + Vite es más directo.
 
 **Solo usa Nuxt si:**
 - Necesitas SSR (no es el caso)
@@ -56,12 +56,12 @@
 
 | Opción | Setup | Boilerplate | Learning | Estado Global |
 |--------|-------|------------|----------|---------------|
-| **Pinia** | 5min | Mínimo | Fácil | ✅ Excelente |
-| Vuex | 15min | Mucho | Medio | ✅ Excelente |
-| useState | N/A | 0 | Fácil | ❌ Prop drilling |
-| Context + useReducer | 10min | Bastante | Medio | ⚠️ Funciona |
+| **Pinia** | 5min | Mínimo | Fácil |  Excelente |
+| Vuex | 15min | Mucho | Medio |  Excelente |
+| useState | N/A | 0 | Fácil |  Prop drilling |
+| Context + useReducer | 10min | Bastante | Medio |  Funciona |
 
-✅ **Pinia:** Setup fácil, docs claras, comunidad activa, es el futuro de Vue.
+ **Pinia:** Setup fácil, docs claras, comunidad activa, es el futuro de Vue.
 
 ---
 
@@ -101,14 +101,14 @@
 **R:** Firebase agrega complejidad:
 
 ```
-❌ Firebase:
+ Firebase:
 - Auth setup (+ 20 min)
 - Firestore collections (+ 30 min)
 - Security rules (+ 30 min)
 - Conexión errores (+ debugging)
 = Total: 80+ min, sin validación del concepto
 
-✅ LocalStorage Mock:
+ LocalStorage Mock:
 - JSON arrays (5 min)
 - Pinia stores (10 min)
 - Lógica simulada (15 min)
@@ -269,7 +269,7 @@ TOTAL:             ~200 KB
 Gzipped:            ~60 KB
 ```
 
-**Descarga:** Instant en 4G. ✅
+**Descarga:** Instant en 4G. 
 
 ---
 
@@ -311,22 +311,22 @@ Gzipped:            ~60 KB
 
 ```
 FASE 1 (Hackathon - Ahora)
-✅ Frontend Vue puro + mock
-✅ Validación UX/concepto
-✅ Demo funcionando
+ Frontend Vue puro + mock
+ Validación UX/concepto
+ Demo funcionando
 
 FASE 2 (30 días post-hackathon)
-🔧 Backend Node.js + Express/Fastify
-🔧 PostgreSQL database
-🔧 JWT autenticación real
-🔧 REST APIs (CRUD)
-🔧 Deployment real
+ Backend Node.js + Express/Fastify
+ PostgreSQL database
+ JWT autenticación real
+ REST APIs (CRUD)
+ Deployment real
 
 FASE 3 (60+ días)
-📱 App móvil (React Native)
-☁️ Infraestructura (AWS/GCP)
-🤖 Inteligencia Artificial (matching de donantes)
-📊 Analytics avanzado
+ App móvil (React Native)
+ Infraestructura (AWS/GCP)
+ Inteligencia Artificial (matching de donantes)
+ Analytics avanzado
 ```
 
 **Estimado Fase 2:** 200-300 horas de dev.
@@ -381,7 +381,7 @@ auth.login = async (email, password) => {
 }
 ```
 
-**Cambio:** 2 líneas. ✅
+**Cambio:** 2 líneas. 
 
 ---
 
@@ -415,10 +415,10 @@ auth.login = async (email, password) => {
 
 **R:** Mínimo:
 
-- ✅ JavaScript/TypeScript básico
-- ✅ HTML & CSS fundamentals
-- ✅ Componentes Vue (no experto)
-- ✅ Git basics
+-  JavaScript/TypeScript básico
+-  HTML & CSS fundamentals
+-  Componentes Vue (no experto)
+-  Git basics
 
 **Bonificador (no requerido):**
 - Pinia (fácil de aprender)
@@ -483,10 +483,10 @@ auth.login = async (email, password) => {
 **R:** Copia local en laptop + fallback.
 
 ```
-✅ Host en localhost:5173 (Vite dev server)
-✅ Usa WiFi local si necesitas
+ Host en localhost:5173 (Vite dev server)
+ Usa WiFi local si necesitas
 
-❌ NO dependa de Vercel en vivo (puede caer)
+ NO dependa de Vercel en vivo (puede caer)
 ```
 
 **Pro tip:** Deploy en Vercel de todas formas. Tienes respaldo.
@@ -596,12 +596,12 @@ Browser devtools → Vue → Pinia tab → Inspecciona stores.
 
 **Solución:**
 ```javascript
-// Mala ❌
+// Mala 
 watch(foods, () => {
   // Recalcula TODO
 }, { deep: true })
 
-// Buena ✅
+// Buena 
 const filteredFoods = computed(() => 
   foods.value.filter(f => f.status === 'active')
 )
@@ -614,10 +614,10 @@ const filteredFoods = computed(() =>
 **R:** Verifica Tailwind breakpoints.
 
 ```html
-<!-- Mala ❌ -->
+<!-- Mala -->
 <div class="w-96">Siempre 384px</div>
 
-<!-- Buena ✅ -->
+<!-- Buena  -->
 <div class="w-full md:w-96">Full mobile, 384px en desktop</div>
 ```
 
@@ -625,11 +625,11 @@ Test en Chrome DevTools (F12 → Responsive mode).
 
 ---
 
-## 🎉 Resumen Final
+##  Resumen Final
 
 **35 preguntas. 1 respuesta simple:**
 
 > Con Vue 3 + Vite + Pinia + Tailwind + mock data, puedes construir un MVP navegable en 3-4 días, demostrar en 20 minutos ohne backend, y escalar a producción en Fase 2 con arquitectura preparada.
 
-**¿Otras preguntas?** Revisa los documentos de arquitectura. Ahí están las respuestas. 🚀
+
 
