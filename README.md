@@ -2,7 +2,8 @@
 <p align="center">
   <img src="mano-manzana.svg" width="250"/>
 </p>
- Proyecto: Plataforma de Rescate Alimentario e Inclusión Productiva
+
+ # Proyecto: Plataforma de Rescate Alimentario e Inclusión Productiva
 - Idea del proyecto
 
 Desarrollar una plataforma digital que conecte establecimientos comerciales con excedentes de alimentos próximos a perecer, pero aptos para consumo, con organizaciones comunitarias, comedores y líderes sociales de zonas urbanas vulnerables, facilitando su identificación, asignación y distribución eficiente.
@@ -11,7 +12,7 @@ Adicionalmente, la plataforma incorpora un módulo de inclusión productiva medi
 
 La solución busca atender el hambre inmediata, reducir el desperdicio alimentario y contribuir a la disminución de la pobreza urbana mediante el uso de tecnología y articulación comunitaria.
 
-#Problema
+# Problema
 
 En muchas zonas urbanas existen dos problemas simultáneos:
 
@@ -21,7 +22,7 @@ Además, hay falta de oportunidades de formación y empleo.
 
 👉 El problema central es la desconexión entre los excedentes de alimentos y las comunidades que los necesitan, junto con la falta de rutas de inclusión productiva.
 
-#Solución propuesta
+# Solución propuesta
 
 Una plataforma web con dos módulos:
 
@@ -31,6 +32,7 @@ Visualización de ofertas por organizaciones
 Solicitud de alimentos
 Asignación según prioridad y cercanía
 Confirmación de entrega y trazabilidad
+
 🎓 Módulo 2: Formación e inclusión laboral
 Catálogo de cursos básicos
 Inscripción a rutas de aprendizaje
@@ -50,14 +52,14 @@ Visualización de solicitudes
 Asignación básica de entregas
 Confirmación de recepción
 
-#Segundo módulo:
+# Segundo módulo:
 
 Lista de cursos básicos
 Inscripción simple
 Seguimiento básico
 💎 Propuesta de valor
 
-“Convertimos excedentes alimentarios en ayuda inmediata y oportunidades laborales a futuro.”
+## “Convertimos excedentes alimentarios en ayuda inmediata y oportunidades laborales a futuro.”
 
 📊 Impacto esperado
 Reducción del desperdicio de alimentos
@@ -65,6 +67,7 @@ Atención a comunidades vulnerables
 Mayor acceso a formación
 Generación de oportunidades laborales
 Trazabilidad de donaciones
+
 💻 Tecnologías sugeridas
 Frontend: HTML, CSS, JavaScript o React
 Backend: Python (Flask o Django)
