@@ -1,4 +1,4 @@
 # Bug-hunters
 <p align="center">
-  <img src="./mano-manzana.svg" width="300"/>
+  <img src="mano-manzana.svg" alt="Mano con manzana" width="300"/>
 </p>
