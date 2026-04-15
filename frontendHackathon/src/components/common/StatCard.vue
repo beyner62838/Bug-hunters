@@ -43,10 +43,11 @@ const displayValue = computed(() =>
       class="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br text-white"
       :class="accentMap[props.accent] ?? accentMap.brand"
     >
-      <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-slate-950/15 text-white">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
-          <path d="M12 4v16" />
-          <path d="M4 12h16" />
+      <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/15">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-white">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 8h.01" />
+          <path d="M12 11v4" />
         </svg>
       </span>
     </div>
