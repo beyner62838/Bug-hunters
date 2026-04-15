@@ -94,7 +94,7 @@
 
 ---
 
-## Backend & Firebase {#backend}
+## Backend & Firebase 
 
 ### P6: ¿Por qué no usar Firebase en lugar de mock?
 
@@ -253,7 +253,7 @@ Esto simula entregas "en tránsito" sin backend real.
 
 ### P13: ¿Cuál será el tamaño final del bundle?
 
-**R:**估计estimate para production:
+RTA: estimate para production:
 
 ```
 Vue 3:              ~35 KB
@@ -269,13 +269,13 @@ TOTAL:             ~200 KB
 Gzipped:            ~60 KB
 ```
 
-**Descarga:** Instant en 4G. 
+Descarga: Instant en 4G. 
 
 ---
 
 ### P14: ¿Será lenta la app con 50 registros mock?
 
-**R:** NO. 50 registros es trivial.
+RTA: NO. 50 registros es trivial.
 
 **Localización:** ¿Cuándo empieza a lentificarse?
 - 1K registros: Rápido
@@ -288,7 +288,7 @@ Gzipped:            ~60 KB
 
 ### P15: ¿Qué tal Leaflet con 5 zonas en el mapa?
 
-**R:** Ultra rápido.
+RTA: Ultra rápido.
 
 **Leaflet renderiza eficientemente:**
 - 5 capas poligonales: < 50ms
@@ -307,7 +307,7 @@ Gzipped:            ~60 KB
 
 ### P16: ¿Qué pasa cuando ganan la hackathon?
 
-**R:** Propuesta de Fase 2:
+R: Propuesta de Fase 2:
 
 ```
 FASE 1 (Hackathon - Ahora)
@@ -335,7 +335,7 @@ FASE 3 (60+ días)
 
 ### P17: ¿Será fácil migrar de mock a backend?
 
-**R:** **SÍ, muy fácil.** La arquitectura está preparada.
+RTA: SÍ, muy fácil.** La arquitectura está preparada.
 
 **Paso 1:** Crear `services/api.ts`
 
@@ -356,13 +356,13 @@ const fetch = async () => {
 }
 ```
 
-**Resultado:** 30 min de refactor, todo funciona.
+Resultado: 30 min de refactor, todo funciona.
 
 ---
 
 ### P18: ¿Qué pasa con autenticación?
 
-**R:** AuthStore prepara para JWT.
+RTA: AuthStore prepara para JWT.
 
 **Mock (Ahora):**
 ```javascript
@@ -389,7 +389,7 @@ auth.login = async (email, password) => {
 
 ### P19: ¿Cuál es el equipo mínimo?
 
-**R:**
+RTA:
 
 **Escenario 1 (Lean - Recomendado)**
 - 1 Frontend Developer (full-time)
@@ -413,7 +413,7 @@ auth.login = async (email, password) => {
 
 ### P20: ¿Qué habilidades tiene que tener el dev?
 
-**R:** Mínimo:
+RTA: Mínimo:
 
 -  JavaScript/TypeScript básico
 -  HTML & CSS fundamentals
@@ -429,7 +429,7 @@ auth.login = async (email, password) => {
 
 ### P21: ¿Dónde encuentro recursos?
 
-**R:**
+RTA:
 
 **Tutoriales (Gratis)**
 - Vue 3: https://vuejs.org/ (oficial)
@@ -452,7 +452,7 @@ auth.login = async (email, password) => {
 
 ### P22: ¿Cuánto tiempo toma demostrar?
 
-**R:** 20 minutos es el estándar.
+RTA: 20 minutos es el estándar.
 
 **Breakdown sugerido:**
 
@@ -480,7 +480,7 @@ auth.login = async (email, password) => {
 
 ### P23: ¿Cómo presento sin internet?
 
-**R:** Copia local en laptop + fallback.
+RTA: Copia local en laptop + fallback.
 
 ```
  Host en localhost:5173 (Vite dev server)
@@ -495,7 +495,7 @@ auth.login = async (email, password) => {
 
 ### P24: ¿Debería grabar un video?
 
-**R:** Opcional pero recomendado.
+RTA: Opcional pero recomendado.
 
 **Por qué:**
 - Backup si hay problemas técnicos en vivo
@@ -510,7 +510,7 @@ auth.login = async (email, password) => {
 
 ### P25: ¿Qué pasa si Leaflet no carga?
 
-**R:** Fallback rápido:
+RTA: Fallback rápido:
 
 ```javascript
 // Si Leaflet falla
@@ -534,7 +534,7 @@ O:
 
 ### P26: ¿Qué pasa si LocalStorage falla?
 
-**R:** Session en memoria (degradación elegante).
+RTA: Session en memoria (degradación elegante).
 
 ```javascript
 try {
@@ -552,7 +552,7 @@ App sigue funcionando, solo no persiste.
 
 ### P27: ¿Error de CORS al consumir APIs?
 
-**R:** Como no consumes APIs externas (todo es local), NO hay CORS.
+RTA: Como no consumes APIs externas (todo es local), NO hay CORS.
 
 **Si luego necesitas:**
 ```javascript
@@ -566,7 +566,7 @@ app.use(cors({
 
 ### P28: ¿Cómo debuguear Pinia?
 
-**R:** Devtools oficial:
+RTA: Devtools oficial:
 
 ```bash
 npm install @pinia/devtools
@@ -587,7 +587,7 @@ Browser devtools → Vue → Pinia tab → Inspecciona stores.
 
 ### P29: ¿El app se congela con muchos datos?
 
-**R:** No deberías, pero si passa:
+RTA: No deberías, pero si passa:
 
 **Culpritos comunes:**
 1. Watchers no optimizados → Usar `computed`
@@ -611,7 +611,7 @@ const filteredFoods = computed(() =>
 
 ### P30: ¿Responsive no funciona en mobile?
 
-**R:** Verifica Tailwind breakpoints.
+RTA: Verifica Tailwind breakpoints.
 
 ```html
 <!-- Mala -->
