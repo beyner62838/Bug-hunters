@@ -95,9 +95,9 @@ async function handleLogout() {
       :class="drawerClasses"
     >
       <RouterLink to="/" class="mb-8 flex items-center gap-3" @click="closeSidebar">
-        <div class="flex h-12 w-12 items-center justify-center rounded-3xl bg-red-600 font-display text-lg font-bold text-white shadow-sm">
-          <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="11" r="6" fill="#ff1919" />
+        <div class="flex h-12 w-12 items-center justify-center rounded-3xl bg-slate-900 font-display text-lg font-bold text-white shadow-sm">
+          <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" xmlns="https://img.icons8.com/?size=100&id=G9aQlVzIT6H5&format=png&color=000000">
+            <circle cx="12" cy="11" r="6" fill="#ffffff" />
             <path d="M15 5.5c0 1.38-1.12 2.5-2.5 2.5S10 6.88 10 5.5" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round" />
             <path d="M13.5 2.5c.5.2.9.7 1 1.3" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round" />
             <path d="M16 3.5c0 .83-.67 1.5-1.5 1.5" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round" />
