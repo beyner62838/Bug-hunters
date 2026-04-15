@@ -1,5 +1,9 @@
 # 🌍 RedAlimenta – Plataforma de Rescate Alimentario e Inclusión Productiva
 
+<p align="center">
+  <img src="mano-manzana.png" width="250"/>
+</p>
+
 ## 🧠 Descripción
 
 **RedAlimenta** es una plataforma digital desarrollada como prototipo funcional de alta fidelidad que busca combatir el hambre y la pobreza en zonas urbanas mediante el uso estratégico de la tecnología.
