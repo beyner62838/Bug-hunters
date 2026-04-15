@@ -40,10 +40,10 @@ const displayValue = computed(() =>
 <template>
   <article class="panel-surface overflow-hidden p-5">
     <div
-      class="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br"
+      class="stat-card-deco"
       :class="accentMap[props.accent] ?? accentMap.brand"
     >
-      <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-slate-950">
+      <span class="stat-card-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
           <circle cx="12" cy="12" r="9" />
           <path d="M12 8h.01" />

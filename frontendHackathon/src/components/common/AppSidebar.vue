@@ -129,10 +129,10 @@ async function handleLogout() {
               v-for="item in section.items"
               :key="item.to"
               :to="item.to"
-              class="group flex items-center rounded-2xl px-3 py-3 text-sm transition"
+              class="group sidebar-item flex items-center rounded-2xl px-3 py-3 text-sm transition"
               :class="
                 isActive(item.to)
-                  ? 'bg-white text-slate-950 shadow-soft'
+                  ? 'sidebar-item-active'
                   : 'text-slate-300 hover:bg-white/8 hover:text-white'
               "
               @click="closeSidebar"

@@ -47,7 +47,34 @@ body {
 }
 
 .panel-surface {
-  @apply rounded-3xl border border-white/70 bg-white/90 shadow-panel backdrop-blur;
+  @apply relative overflow-hidden rounded-[2rem] border border-white/85 bg-white/95 shadow-panel backdrop-blur;
+}
+
+.sidebar-item {
+  @apply relative overflow-hidden rounded-2xl;
+}
+
+.sidebar-item-active {
+  @apply bg-white text-slate-950 shadow-soft;
+}
+
+.sidebar-item-active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 999px 0 0 999px;
+  background: rgba(79, 192, 144, 0.9);
+}
+
+.stat-card-deco {
+  @apply mb-4 flex h-14 w-14 items-center justify-center rounded-[1.75rem] bg-gradient-to-br;
+}
+
+.stat-card-icon {
+  @apply inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-slate-950 shadow-sm;
 }
 
 .section-title {
