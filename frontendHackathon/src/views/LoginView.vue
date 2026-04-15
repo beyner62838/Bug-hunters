@@ -62,7 +62,7 @@ async function quickAccess(role) {
       <div class="grid w-full gap-8 lg:grid-cols-[1.05fr_0.95fr]">
         <section class="flex flex-col justify-center">
           <div class="inline-flex w-fit rounded-full border border-brand-400/20 bg-brand-400/10 px-4 py-2 text-sm font-semibold text-brand-100">
-            RedAlimenta · Acceso demo con roles
+            RedAlimenta 
           </div>
           <h1 class="mt-6 max-w-3xl font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             Redistribución alimentaria con rutas reales de inclusión productiva

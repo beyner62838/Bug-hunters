@@ -16,6 +16,13 @@ const route = useRoute()
 const router = useRouter()
 const authStore = useAuthStore()
 
+const icons = {
+  menu: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>',
+  plus: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>',
+  book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M4 4.5A2.5 2.5 0 0 1 6.5 7H20v11.5"/><path d="M8 6h8"/><path d="M8 10h8"/></svg>',
+  logout: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 16l-4-4 4-4"/><path d="M5 12h11"/><path d="M19 5v14"/></svg>'
+}
+
 const contextualText = computed(() => {
   if (authStore.role === 'beneficiary') {
     return 'Ruta de formación, inscripción y postulación laboral'
@@ -27,6 +34,8 @@ const contextualText = computed(() => {
 
   return 'MVP navegable para operación, impacto y empleabilidad'
 })
+
+const primaryActionIcon = computed(() => (authStore.role === 'beneficiary' ? icons.book : icons.plus))
 
 const primaryAction = computed(() =>
   authStore.role === 'beneficiary'
@@ -54,8 +63,9 @@ async function handleLogout() {
           type="button"
           class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 shadow-soft transition hover:border-brand-200 hover:text-brand-700 lg:hidden"
           @click="$emit('toggle-sidebar')"
+          aria-label="Abrir menú"
         >
-          <span class="text-lg font-semibold">≡</span>
+          <span class="inline-flex h-5 w-5" v-html="icons.menu"></span>
         </button>
 
         <div>
@@ -79,6 +89,7 @@ async function handleLogout() {
           :to="primaryAction.to"
           class="inline-flex items-center rounded-full bg-slate-950 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700"
         >
+          <span class="mr-2 inline-flex h-5 w-5" v-html="primaryActionIcon"></span>
           {{ primaryAction.label }}
         </RouterLink>
         <button
@@ -86,6 +97,7 @@ async function handleLogout() {
           class="inline-flex items-center rounded-full border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-rose-200 hover:text-rose-700"
           @click="handleLogout"
         >
+          <span class="mr-2 inline-flex h-5 w-5" v-html="icons.logout"></span>
           Salir
         </button>
       </div>
