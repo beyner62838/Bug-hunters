@@ -215,7 +215,7 @@ npm run build
 - Escalable a integración futura con APIs reales
 
 ## 👨‍💻 Equipo
-Proyecto desarrollado en la II Hackathon de Programación – Universidad Surcolombiana (2026)
+Bug Hunters - Proyecto desarrollado en la II Hackathon de Programación – Universidad Surcolombiana (2026)
 
 ## 📄 Licencia
 Uso académico – Hackathon Universitaria
