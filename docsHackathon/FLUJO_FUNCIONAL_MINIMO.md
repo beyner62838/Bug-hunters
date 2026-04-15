@@ -8,7 +8,7 @@ Este documento especifica el **flujo mínimo funcional** que debe estar 100% ope
 
 ## 2. Flujos Críticos a Implementar
 
-### Flujo A: "De la Donación a la Entrega" (Prioridad 🔴 MÁXIMA)
+### Flujo A: "De la Donación a la Entrega" (Prioridad  MÁXIMA)
 
 Este es el flujo "estrella" de la hackathon. Debe funcionar perfectamente.
 
@@ -20,7 +20,7 @@ Este es el flujo "estrella" de la hackathon. Debe funcionar perfectamente.
 PASO 1: Usuario inicia sesión como DONANTE
 ├─ Accede a Login
 ├─ Ingresa email: donor@example.com
-└─ Entra a DonorDashboard ✅
+└─ Entra a DonorDashboard 
 
 PASO 2: Donante publica alimento
 ├─ Hace clic en "Publicar Alimento"
@@ -32,23 +32,23 @@ PASO 2: Donante publica alimento
 │  ├─ Ubicación: Zona Centro
 │  └─ Urgencia: Alta
 ├─ Hace clic "Publicar"
-├─ Toast: "¡Alimento publicado!" ✅
-└─ Datos persisten en LocalStorage ✅
+├─ Toast: "¡Alimento publicado!" 
+└─ Datos persisten en LocalStorage 
 
 PASO 3: Sistema asigna automáticamente
 ├─ En background (simulado), foodStore busca:
 │  ├─ Organizaciones en esa zona
 │  ├─ Solicitudes de ayuda activas
 │  └─ Prioridades (urgencia, caducidad)
-├─ Estado del alimento cambia a "Asignado" ✅
-└─ Se registra en DeliveryStore ✅
+├─ Estado del alimento cambia a "Asignado" 
+└─ Se registra en DeliveryStore 
 
 PASO 4: Receptor ve alimento disponible
 ├─ Usuario inicia sesión como RECEPTOR
 ├─ Va a RecipientDashboard
 ├─ Ve "Alimentos Disponibles" grid
 ├─ Filtra por categoría "Frutas"
-├─ Ve la oferta de manzanas 20kg ✅
+├─ Ve la oferta de manzanas 20kg 
 ├─ Información visible:
 │  ├─ Foto (placeholder)
 │  ├─ "Manzanas rojas"
@@ -56,7 +56,7 @@ PASO 4: Receptor ve alimento disponible
 │  ├─ Caducidad: 5 días
 │  ├─ Distancia: 2.3 km
 │  └─ Botón "Solicitar"
-└─ Hace clic "Solicitar" ✅
+└─ Hace clic "Solicitar" 
 
 PASO 5: Receptor confirma solicitud
 ├─ Abre modal de confirmación
@@ -65,22 +65,22 @@ PASO 5: Receptor confirma solicitud
 │  ├─ Zona de entrega: Zona Sur
 │  └─ Notas: "Persona sola, disponible de 14-16hs"
 ├─ Hace clic "Confirmar Solicitud"
-├─ Toast: "Solicitud enviada" ✅
-└─ Datos en orderStore + LocalStorage ✅
+├─ Toast: "Solicitud enviada" 
+└─ Datos en orderStore + LocalStorage 
 
 PASO 6: Admin ve en tiempo real
 ├─ Admin accede a AdminkDashboard
 ├─ Ve métrica actualizada:
 │  ├─ "Entregas Activas: 1"
 │  ├─ "Personas beneficiadas hoy: +1"
-│  └─ Mapa mini actualizado con pin 🔵
+│  └─ Mapa mini actualizado con pin 
 ├─ Haz clic en "Ver Trazabilidad Completa"
 ├─ Timeline muestra:
 │  ├─ 14:30 - Donante Juan publicó
 │  ├─ 14:35 - Sistema asignó a Org XYZ
 │  ├─ 14:40 - Receptor María solicitó
-│  └─ 14:45 - Estado: "En Transito" ⏳
-└─ Todo actualizado en tiempo real ✅
+│  └─ 14:45 - Estado: "En Transito" 
+└─ Todo actualizado en tiempo real 
 
 PASO 7: Entrega se marca como completada
 ├─ Receptor recibe (simulado)
@@ -88,10 +88,10 @@ PASO 7: Entrega se marca como completada
 ├─ Completa Rating: ⭐⭐⭐⭐⭐
 ├─ Comentario: "Excelente, frutas muy frescas"
 ├─ Hace clic "Enviar Evaluación"
-├─ Estado cambia a "Entregado" ✅
-└─ Datos persistidos en LocalStorage ✅
+├─ Estado cambia a "Entregado" 
+└─ Datos persistidos en LocalStorage 
 
-RESULTADO FINAL: ✅
+RESULTADO FINAL: 
 ✓ Flujo completo demostrable en 3-5 minutos
 ✓ Trazabilidad perfecta en admin
 ✓ Datos persisten en navegador
@@ -103,11 +103,11 @@ RESULTADO FINAL: ✅
 - 1 persona = Donante
 - 1 persona = Receptor
 - 1 persona = Admin
-- Todos ven estados actualizándose en tiempo real ✨
+- Todos ven estados actualizándose en tiempo real 
 
 ---
 
-### Flujo B: "Beneficiario se Capacita" (Prioridad 🟠 ALTA)
+### Flujo B: "Beneficiario se Capacita" (Prioridad  ALTA)
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
@@ -118,16 +118,16 @@ PASO 1: Usuario accede a Cursos (SIN login)
 ├─ Va a /courses
 ├─ Ve grid con 10 cursos
 ├─ Filtra por categoría "Emprendimiento"
-├─ Busca por "Marketing" (debounce search) ✅
-└─ Encuentra "Marketing Digital" ✅
+├─ Busca por "Marketing" (debounce search) 
+└─ Encuentra "Marketing Digital" 
 
 PASO 2: Ve detalles del curso
 ├─ Haz clic en curso
 ├─ Va a /courses/marketing-digital
 ├─ Lee descripción completa
 ├─ Ve instructor, duración, reviews
-├─ Todo precargado desde mock-courses.json ✅
-└─ Botón destacado: "Inscribirse Ahora" 🎓
+├─ Todo precargado desde mock-courses.json 
+└─ Botón destacado: "Inscribirse Ahora" 
 
 PASO 3: Se registra e inscribe
 ├─ Hace clic "Inscribirse Ahora"
@@ -135,8 +135,8 @@ PASO 3: Se registra e inscribe
 ├─ Completa formulario rápido
 ├─ Selecciona rol "Beneficiario"
 ├─ Hace clic "Registrarse e Inscribirse"
-├─ LocalStorage guarda sesión + inscripción ✅
-└─ Redirecciona a CourseDetailView ✅
+├─ LocalStorage guarda sesión + inscripción 
+└─ Redirecciona a CourseDetailView 
 
 PASO 4: Accede al contenido del curso
 ├─ Botón cambia a "Continuar Curso →"
@@ -148,23 +148,23 @@ PASO 4: Accede al contenido del curso
 │  │  ├─ Lección 2: Validación de idea
 │  │  │  └─ [▶ Video - 30 min]
 │  │  └─ Lección 3: Quiz de evaluación
-│  │     └─ [📝 Quiz - 10 min] [⏳ No completado aún]
+│  │     └─ [ Quiz - 10 min] [ No completado aún]
 │  │
 │  └─ Módulo 2: Práctico (bloqueado hasta completar Módulo 1)
 ├─ Simula con localStorage
-├─ Muestra progreso: "15% completado" ✅
-└─ Puede marcar visto/no visto ✅
+├─ Muestra progreso: "15% completado" 
+└─ Puede marcar visto/no visto 
 
 PASO 5: Completa y obtiene certificado
 ├─ Completa Módulo 1
 ├─ Intenta Módulo 2
 ├─ Completa Quiz final
-├─ Sistema muestra: ✅ "¡CURSO COMPLETADO!"
+├─ Sistema muestra:  "¡CURSO COMPLETADO!"
 ├─ Botón: "Descargar Certificado" (simulado)
 ├─ Email confirmación (simulado)
-└─ Se guarda en LoggedUser.completedCourses ✅
+└─ Se guarda en LoggedUser.completedCourses 
 
-RESULTADO FINAL: ✅
+RESULTADO FINAL: 
 ✓ Flujo de educación validado
 ✓ Inscripción → Contenido → Certificado
 ✓ Datos del usuario actualizados
@@ -173,7 +173,7 @@ RESULTADO FINAL: ✅
 
 ---
 
-### Flujo C: "Monitoreo administrativo" (Prioridad 🟡 MEDIA-ALTA)
+### Flujo C: "Monitoreo administrativo" (Prioridad  MEDIA-ALTA)
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
@@ -188,8 +188,8 @@ PASO 1: Admin accede a panel
 │  ├─ Personas Ayudadas: 45 ↑12%
 │  ├─ Alimentos Distribuidos: 1,245 kg
 │  └─ Zonas Activas: 8
-├─ Métricas calculadas en tiempo real desde stores ✅
-└─ Datos vienen de mock + LocalStorage ✅
+├─ Métricas calculadas en tiempo real desde stores 
+└─ Datos vienen de mock + LocalStorage 
 
 PASO 2: Ve mapa de entregas en vivo
 ├─ Mini mapa Leaflet + OpenStreetMap
@@ -203,7 +203,7 @@ PASO 2: Ve mapa de entregas en vivo
 │  ├─ Receptor: "Familia González"
 │  └─ Estado: "En tránsito"
 ├─ Clic en pin = detalle completo
-└─ Mapa interactivo y responsive ✅
+└─ Mapa interactivo y responsive 
 
 PASO 3: Genera reportes
 ├─ Section "Reportes" con 4 gráficos:
@@ -224,7 +224,7 @@ PASO 3: Genera reportes
 │     └─ Zona Centro, Zona Sur, Zona Este...
 │
 ├─ Botón "Exportar PDF" (simulado, abre descarga mock)
-└─ Todos los gráficos actualizables ✅
+└─ Todos los gráficos actualizables 
 
 PASO 4: Ve trazabilidad completa
 ├─ Section "Trazabilidad" con timeline
@@ -239,7 +239,7 @@ PASO 4: Ve trazabilidad completa
 │  ├─ [15:00] Orden asignada a Receptor María
 │  └─ [14:30] Donante Juan publicó "20kg Manzanas"
 ├─ Clic en evento = detalles popup
-└─ Log completamente simulado en localStorage ✅
+└─ Log completamente simulado en localStorage 
 
 PASO 5: Moderación de contenido
 ├─ Section "Moderación" con 2 subsecciones:
@@ -253,9 +253,9 @@ PASO 5: Moderación de contenido
 │     ├─ [Ver] [Eliminar] [Avisar Usuario]
 │     └─ 2 reportes simulados
 │
-└─ Botones funcionales (confirman en toast) ✅
+└─ Botones funcionales (confirman en toast) 
 
-RESULTADO FINAL: ✅
+RESULTADO FINAL: 
 ✓ Dashboard administrativo completo
 ✓ Métricas en tiempo real
 ✓ Mapa interactivo
@@ -425,7 +425,7 @@ localStorage = {
 
 ## 6. Checklist: ¿Qué Demostrar en la Hackathon?
 
-### ✅ Demostración Mínima (20 minutos)
+###  Demostración Mínima (20 minutos)
 
 **Acto 1: Setup (1 min)**
 ```
@@ -470,7 +470,7 @@ Paso 3: [Admin ve en tiempo real]
 → Moderation ready
 ```
 
-### 💎 Puntos Destacables
+###  Puntos Destacables
 
 - ✨ "Sin backend, todo en el navegador"
 - ✨ "Datos persisten entre sesiones"
@@ -486,37 +486,37 @@ Paso 3: [Admin ve en tiempo real]
 Estas validaciones DEBEN estar implementadas:
 
 ### Campo "Email" en Login
-- ✅ Detecta si es donante, receptor o admin
-- ✅ No permite entrar sin email válido (formato)
+-  Detecta si es donante, receptor o admin
+-  No permite entrar sin email válido (formato)
 
 ### Formulario "Publicar Alimento"
-- ✅ Validación de campos obligatorios
-- ✅ Cantidad > 0
-- ✅ Fecha caducidad > hoy
-- ✅ Guarda y persiste en LocalStorage
+-  Validación de campos obligatorios
+-  Cantidad > 0
+-  Fecha caducidad > hoy
+-  Guarda y persiste en LocalStorage
 
 ### Solicitud de Ayuda
-- ✅ Cantidad solicitada ≤ cantidad disponible
-- ✅ Zona válida
-- ✅ Urgencia registrada
+-  Cantidad solicitada ≤ cantidad disponible
+-  Zona válida
+-  Urgencia registrada
 
 ### Flujo Admin
-- ✅ Solo admin@example.com accede
-- ✅ Métricas actualizan en tiempo real
-- ✅ Filtros funcionan
-- ✅ Exportar genera archivo simulado
+-  Solo admin@example.com accede
+-  Métricas actualizan en tiempo real
+-  Filtros funcionan
+-  Exportar genera archivo simulado
 
 ---
 
 ## 8. Errores Comunes a Evitar
 
-❌ **NO hacer:**
+ **NO hacer:**
 - Pantallas sin datos (mostrará vacío, rompe demo)
 - Botones que no funcionan (genera dudas)
 - Formularios que no guardan (demo frágil)
 - Responsividad rota en mobile (ambiente imprevisible)
 
-✅ **SÍ hacer:**
+ **SÍ hacer:**
 - Llenar con datos mock iniciales
 - Todos los botones funcionales (aunque sea simulado)
 - LocalStorage funcionando siempre
@@ -542,10 +542,10 @@ Estas validaciones DEBEN estar implementadas:
 11. Cambia de role > ¿Componentes cambian?
 12. Mapa > ¿Carga sin errores?
 13. Cursos > ¿Grid muestra bien?
-14. Todo responsive en mobile? ✅
+14. Todo responsive en mobile? 
 ```
 
-✅ Si todo funciona → Demo exitosa garantizada
+ Si todo funciona → Demo exitosa garantizada
 
 ---
 
