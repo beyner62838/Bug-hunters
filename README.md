@@ -139,7 +139,7 @@ Muestra empresas vinculadas al ecosistema de apoyo, junto con vacantes o posibil
 ### 1.11. Módulo administrativo
  
 Consolida métricas e indicadores estratégicos del sistema, útiles para supervisión y toma de decisiones.
----
+
 
 ## 🔄 Flujos Principales
 
