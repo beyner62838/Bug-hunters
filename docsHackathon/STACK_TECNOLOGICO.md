@@ -113,7 +113,7 @@
 
 ## 4. Por Qué SIN Backend
 
-### ❌ Backend Agrega Complejidad
+###  Backend Agrega Complejidad
 - Setup de servidor (Node, Python, etc.)
 - Base de datos (PostgreSQL, MongoDB)
 - Conexiones y CORS
@@ -121,14 +121,14 @@
 - Autenticación real (JWT, OAuth)
 - **Tiempo perdido:** 30-50% del desarrollo
 
-### ✅ Frontend Mock Agrega Velocidad
+###  Frontend Mock Agrega Velocidad
 - Todo en el navegador
 - Sin latencia de servidor
 - Fácil de demo en local
 - Sin costo de infraestructura
 - **Ganancia de tiempo:** 50-70% más rapido
 
-### 📊 Simulación Realista
+###  Simulación Realista
 Con JSON mock y LocalStorage, se puede simular perfectamente:
 - Flujos completos (donación → entrega → capacitación)
 - Errores y validaciones
@@ -243,29 +243,29 @@ proyecto-root/
 
 ## 10. Alternativas Descartadas y Razones
 
-### ❌ Nuxt 3 (Full-stack framework)
+###  Nuxt 3 (Full-stack framework)
 - **Razón:** Overkill para un prototipo sin backend. Agrega setup extra.
 
-### ❌ React + Next.js
+###  React + Next.js
 - **Razón:** Curva de aprendizaje más pronunciada, más setup inicial.
 
-### ❌ Angular
+###  Angular
 - **Razón:** Muy pesado, orientado a proyectos grandes, no hackathons.
 
-### ❌ Svelte
+###  Svelte
 - **Razón:** Comunidad más pequeña, menos recursos, riesgo desconocido.
 
-### ❌ Firebase/Supabase
+###  Firebase/Supabase
 - **Razón:** Innecesario para demo, complica infraestructura.
 
-### ❌ AWS Amplify
+###  AWS Amplify
 - **Razón:** Mismo problema, además requiere cuenta AWS.
 
 ---
 
 ## 11. Deployment Recomendado
 
-### ✅ Vercel (Recomendado)
+### Vercel (Recomendado)
 ```bash
 npm install -g vercel
 vercel
@@ -274,7 +274,7 @@ vercel
 - Costo: Gratis
 - CI/CD automático
 
-### ✅ Netlify (Alternativa)
+###  Netlify (Alternativa)
 ```bash
 npm install -g netlify-cli
 netlify deploy --prod
@@ -283,7 +283,7 @@ netlify deploy --prod
 - Costo: Gratis
 - Preview automático
 
-### ✅ GitHub Pages
+###  GitHub Pages
 - Tiempo: 2 minutos (si usa GitHub)
 - Costo: Gratis
 - No requiere CLI
@@ -307,14 +307,14 @@ netlify deploy --prod
 
 ## 13. Notas Finales
 
-✅ **Este stack es:**
+ **Este stack es:**
 - Moderno y probado en producción
 - Rápido de desarrollar
 - Perfecto para hackathons
 - Escalable a backend posteriormente
 - Profesional al presentar
 
-❌ **NO es:**
+ **NO es:**
 - Para aplicaciones críticas sin backend
 - Para empresas que necesitan soporte de nivel empresarial
 - Para devs sin experiencia en frontend
