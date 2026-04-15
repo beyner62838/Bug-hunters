@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mano con manzana animada</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+
+    .container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .hand {
+        animation: moveHand 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes moveHand {
+        0% { transform: translateX(-20px); }
+        100% { transform: translateX(20px); }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+<svg viewBox="0 0 200 200">
+
+    <!-- Manzana -->
+    <circle cx="120" cy="80" r="25" fill="red"/>
+    <rect x="118" y="50" width="4" height="10" fill="brown"/>
+    <ellipse cx="125" cy="50" rx="6" ry="3" fill="green"/>
+
+    <!-- Mano -->
+    <g class="hand">
+        <rect x="60" y="90" width="60" height="30" rx="10" fill="#f5c6a5"/>
+        <circle cx="60" cy="105" r="10" fill="#f5c6a5"/>
+        <circle cx="70" cy="95" r="8" fill="#f5c6a5"/>
+        <circle cx="80" cy="90" r="8" fill="#f5c6a5"/>
+        <circle cx="90" cy="95" r="8" fill="#f5c6a5"/>
+    </g>
+
+</svg>
+</div>
+
+</body>
+</html>
