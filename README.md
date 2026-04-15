@@ -1,7 +1,7 @@
 # 🌍 RedAlimenta – Plataforma de Rescate Alimentario e Inclusión Productiva
 
 <p align="center">
-  <img src="mano-manzana.png" width="250"/>
+  <img src="redAlimenta-logo.png" width="250"/>
 </p>
 
 ## 🧠 Descripción
