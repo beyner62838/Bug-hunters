@@ -30,7 +30,7 @@ flowchart TB
   end
 
   subgraph Hosting
-    Vercel[Vercel / Netlify]
+    GitHubPages[GitHub Pages]
     CDN[CDN Estático]
   end
 
@@ -41,8 +41,8 @@ flowchart TB
   App --> Maps
   Store --> LocalStorage
   App --> JSONMock
-  Browser --> Vercel
-  Vercel --> CDN
+  Browser --> GitHubPages
+  GitHubPages --> CDN
 ```
 
 ---
@@ -65,7 +65,7 @@ flowchart TB
 - **Archivos JSON locales**: datos iniciales simulados para usuarios, alimentos, cursos y zonas.
 
 ### 3.4 Nodo de Hosting
-- **Vercel / Netlify**: hosting estático de la aplicación.
+- **GitHub Pages**: hosting estático de la aplicación.
 - **CDN**: entrega rápida de los assets.
 
 ---
@@ -81,7 +81,7 @@ flowchart TB
   Router[Vue Router]
   Data[Datos Mock / LocalStorage]
   Leaflet[Leaflet Map]
-  Hosting[Vercel / Netlify]
+  Hosting[GitHub Pages]
 
   Client --> Browser
   Browser --> Hosting
