@@ -85,36 +85,36 @@ async function handleLogout() {
 <template>
   <div>
     <div
-      class="fixed inset-0 z-30 bg-slate-950/35 backdrop-blur-sm transition lg:hidden"
+      class="fixed inset-0 z-30 bg-slate-950/20 backdrop-blur-sm transition lg:hidden"
       :class="props.isOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'"
       @click="closeSidebar"
     ></div>
 
     <aside
-      class="fixed inset-y-0 left-0 z-40 flex w-80 max-w-[86vw] flex-col border-r border-white/10 bg-slate-950 px-5 py-6 text-slate-100 shadow-2xl transition duration-300 lg:sticky lg:max-w-none"
+      class="fixed inset-y-0 left-0 z-40 flex w-80 max-w-[86vw] flex-col border-r border-red-100 bg-white px-5 py-6 text-slate-900 shadow-2xl transition duration-300 lg:sticky lg:max-w-none"
       :class="drawerClasses"
     >
       <RouterLink to="/" class="mb-8 flex items-center gap-3" @click="closeSidebar">
-        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-500 font-display text-lg font-bold text-white">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-600 font-display text-lg font-bold text-white">
           RA
         </div>
         <div>
-          <p class="font-display text-xl font-semibold tracking-tight text-white">RedAlimenta</p>
-          <p class="text-sm text-slate-400">Hackathon social urbana</p>
+          <p class="font-display text-xl font-semibold tracking-tight text-slate-950">RedAlimenta</p>
+          <p class="text-sm text-slate-500">Hackathon social urbana</p>
         </div>
       </RouterLink>
 
-      <div class="mb-6 rounded-3xl border border-white/10 bg-white/5 p-4">
-        <p class="text-xs uppercase tracking-[0.22em] text-brand-200">Sesión activa</p>
-        <p class="mt-2 text-base font-semibold text-white">{{ authStore.currentUser?.name }}</p>
-        <p class="mt-1 text-sm text-slate-400">
+      <div class="mb-6 rounded-3xl border border-red-100 bg-red-50 p-4">
+        <p class="text-xs uppercase tracking-[0.22em] text-red-700">Sesión activa</p>
+        <p class="mt-2 text-base font-semibold text-slate-950">{{ authStore.currentUser?.name }}</p>
+        <p class="mt-1 text-sm text-slate-600">
           {{ authStore.roleLabel }} · {{ authStore.currentUser?.organization }}
         </p>
       </div>
 
-      <div class="mb-6 rounded-3xl border border-white/10 bg-white/5 p-4">
-        <p class="text-xs uppercase tracking-[0.22em] text-brand-200">Misión</p>
-        <p class="mt-2 text-sm leading-6 text-slate-300">
+      <div class="mb-6 rounded-3xl border border-slate-200 bg-slate-50 p-4">
+        <p class="text-xs uppercase tracking-[0.22em] text-slate-600">Misión</p>
+        <p class="mt-2 text-sm leading-6 text-slate-700">
           {{ roleMission }}
         </p>
       </div>
@@ -133,7 +133,7 @@ async function handleLogout() {
               :class="
                 isActive(item.to)
                   ? 'sidebar-item-active'
-                  : 'text-slate-300 hover:bg-white/8 hover:text-white'
+                  : 'text-slate-700 hover:bg-slate-100 hover:text-slate-900'
               "
               @click="closeSidebar"
             >
@@ -142,8 +142,8 @@ async function handleLogout() {
                 class="rounded-full px-2 py-1 text-xs font-semibold"
                 :class="
                   isActive(item.to)
-                    ? 'bg-brand-100 text-brand-800'
-                    : 'bg-white/10 text-slate-400 group-hover:bg-white/15 group-hover:text-white'
+                    ? 'bg-red-100 text-red-800'
+                    : 'bg-slate-100 text-slate-600 group-hover:bg-slate-200 group-hover:text-slate-700'
                 "
               >
                 {{ item.badge }}
@@ -154,15 +154,15 @@ async function handleLogout() {
       </nav>
 
       <div class="mt-6 space-y-3">
-        <div class="rounded-3xl border border-brand-500/20 bg-gradient-to-br from-brand-500/20 to-ocean-500/10 p-4">
-          <p class="text-sm font-semibold text-white">Demo con experiencia por rol</p>
-          <p class="mt-1 text-sm text-slate-300">
+        <div class="rounded-3xl border border-red-200 bg-red-50 p-4">
+          <p class="text-sm font-semibold text-red-900">Demo con experiencia por rol</p>
+          <p class="mt-1 text-sm text-red-800">
             Navegación, permisos y acciones cambian según el perfil autenticado.
           </p>
         </div>
         <button
           type="button"
-          class="w-full rounded-2xl border border-white/10 px-4 py-3 text-sm font-semibold text-slate-300 transition hover:border-rose-300/40 hover:bg-white/5 hover:text-white"
+          class="w-full rounded-2xl border border-slate-300 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:border-red-400 hover:bg-red-50 hover:text-red-700"
           @click="handleLogout"
         >
           Cerrar sesión

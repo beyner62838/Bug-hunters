@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  color: #f8f8f8;
+  color: #1a1a1a;
   background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 18%),
-    radial-gradient(circle at top right, rgba(230, 0, 0, 0.08), transparent 18%),
-    linear-gradient(180deg, #090909 0%, #0f1013 100%);
+    radial-gradient(circle at top left, rgba(255, 26, 26, 0.08), transparent 25%),
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.4), transparent 35%),
+    linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%);
   font-family: 'Manrope', 'Aptos', 'Segoe UI', sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,10 +24,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 30%),
-    radial-gradient(circle at top right, rgba(255, 26, 26, 0.08), transparent 20%),
-    linear-gradient(180deg, #090909 0%, #11131a 100%);
-  color: #f8f8f8;
+    radial-gradient(circle at top left, rgba(255, 26, 26, 0.06), transparent 25%),
+    linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
+  color: #1a1a1a;
 }
 
 #app {
@@ -44,12 +43,12 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 26, 26, 0.3);
   border-radius: 999px;
 }
 
 .panel-surface {
-  @apply relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-panel backdrop-blur;
+  @apply relative overflow-hidden rounded-[2rem] border border-red-100 bg-white/95 shadow-panel backdrop-blur;
 }
 
 .sidebar-item {
@@ -57,7 +56,7 @@ body {
 }
 
 .sidebar-item-active {
-  @apply bg-white/10 text-white shadow-soft;
+  @apply bg-red-50 text-red-900 shadow-soft;
 }
 
 .sidebar-item-active::before {
@@ -68,11 +67,11 @@ body {
   bottom: 0;
   width: 4px;
   border-radius: 999px 0 0 999px;
-  background: #e60000;
+  background: #ff1a1a;
 }
 
 .stat-card-deco {
-  @apply mb-4 flex h-14 w-14 items-center justify-center rounded-[1.75rem] bg-gradient-to-br from-red-600 via-red-500 to-white/15;
+  @apply mb-4 flex h-14 w-14 items-center justify-center rounded-[1.75rem] bg-gradient-to-br from-red-500 to-red-100;
 }
 
 .stat-card-icon {
@@ -80,9 +79,9 @@ body {
 }
 
 .section-title {
-  @apply font-display text-2xl font-semibold tracking-tight text-slate-50;
+  @apply font-display text-2xl font-semibold tracking-tight text-slate-900;
 }
 
 .page-shell {
-  @apply space-y-6 text-slate-100;
+  @apply space-y-6 text-slate-900;
 }
