@@ -6,19 +6,19 @@ Esta carpeta contiene los **documentos de arquitectura de sistema completos** pa
 
 ---
 
-## 📋 Documentos Disponibles
+##  Documentos Disponibles
 
-### 1. [ARQUITECTURA.md](ARQUITECTURA.md) 📐
+### 1. [ARQUITECTURA.md](ARQUITECTURA.md) 
 **Acciona aquí para: Entender la visión global**
 
-- ✅ Descripción general del proyecto
-- ✅ Diagrama de arquitectura en capas
-- ✅ Componentes principales (Presentación, Estado, Datos)
-- ✅ Módulos del sistema (7 módulos core)
-- ✅ Tecnologías clave por capa
-- ✅ Estructura de carpetas recomendada
-- ✅ Criterios de éxito de la demo
-- ✅ Fases de implementación (5 fases)
+-  Descripción general del proyecto
+-  Diagrama de arquitectura en capas
+-  Componentes principales (Presentación, Estado, Datos)
+-  Módulos del sistema (7 módulos core)
+-  Tecnologías clave por capa
+-  Estructura de carpetas recomendada
+-  Criterios de éxito de la demo
+-  Fases de implementación (5 fases)
 
 **Lectores:** Product Managers, Arquitectos, Team Leads
 
@@ -29,15 +29,15 @@ Esta carpeta contiene los **documentos de arquitectura de sistema completos** pa
 ### 2. [STACK_TECNOLOGICO.md](STACK_TECNOLOGICO.md) 🔧
 **Acciona aquí para: Decisiones técnicas justificadas**
 
-- ✅ Stack recomendado (Vue 3, Vite, Vue Router, Pinia, Tailwind, Leaflet)
-- ✅ Versiones específicas con package.json
-- ✅ Comparativa: Vue vs React vs Angular (por qué Vue)
-- ✅ Por qué SIN backend (justificación técnica y de tiempo)
-- ✅ Configuración de Vite y Tailwind
-- ✅ Librerías auxiliares opcionales
-- ✅ Alternativas descartadas y razones
-- ✅ Recomendación de deployment (Vercel/Netlify)
-- ✅ Checklist de setup inicial
+-  Stack recomendado (Vue 3, Vite, Vue Router, Pinia, Tailwind, Leaflet)
+-  Versiones específicas con package.json
+-  Comparativa: Vue vs React vs Angular (por qué Vue)
+-  Por qué SIN backend (justificación técnica y de tiempo)
+-  Configuración de Vite y Tailwind
+-  Librerías auxiliares opcionales
+-  Alternativas descartadas y razones
+-  Recomendación de deployment (Vercel/Netlify)
+-  Checklist de setup inicial
 
 **Lectores:** Desarrolladores, Tech Leads, DevOps
 
@@ -48,8 +48,8 @@ Esta carpeta contiene los **documentos de arquitectura de sistema completos** pa
 ### 3. [MODULOS_Y_PANTALLAS.md](MODULOS_Y_PANTALLAS.md) 🎨
 **Acciona aquí para: Especificación de pantallas y componentes**
 
-- ✅ Mapeo completo App → Vistas → Componentes
-- ✅ 8 módulos principales especificados
+-  Mapeo completo App → Vistas → Componentes
+-  8 módulos principales especificados
   - Home & Autenticación
   - Panel de Donantes
   - Panel de Receptores/Beneficiarios
@@ -57,11 +57,11 @@ Esta carpeta contiene los **documentos de arquitectura de sistema completos** pa
   - Cursos y Formación
   - Organizaciones & Alianzas
   - Panel Administrador
-- ✅ Cada módulo con pantallas detalladas
-- ✅ Componentes reutilizables (Common)
-- ✅ Guía de flujos completos demostrables
-- ✅ Especificaciones de datos mock
-- ✅ Métricas de éxito por pantalla
+-  Cada módulo con pantallas detalladas
+-  Componentes reutilizables (Common)
+-  Guía de flujos completos demostrables
+-  Especificaciones de datos mock
+-  Métricas de éxito por pantalla
 
 **Lectores:** Diseñadores, Desarrolladores Frontend, QA
 
@@ -69,20 +69,20 @@ Esta carpeta contiene los **documentos de arquitectura de sistema completos** pa
 
 ---
 
-### 4. [FLUJO_FUNCIONAL_MINIMO.md](FLUJO_FUNCIONAL_MINIMO.md) ✨
+### 4. [FLUJO_FUNCIONAL_MINIMO.md](FLUJO_FUNCIONAL_MINIMO.md) 
 **Acciona aquí para: Qué implementar primero (prioridades)**
 
-- ✅ **Flujo A (CRÍTICO):** Donación → Entrega → Admin (paso a paso)
-- ✅ **Flujo B (ALTA):** Beneficiario se Capacita
-- ✅ **Flujo C (MEDIA-ALTA):** Monitoreo Administrativo
-- ✅ Pantallas opcionales (Nice-to-Have)
-- ✅ Datos iniciales requeridos (JSON mock)
-- ✅ LocalStorage schema
-- ✅ Checklist: Qué demostrar en hackathon (20 minutos)
-- ✅ Validaciones funcionales clave
-- ✅ Errores comunes a evitar
-- ✅ Testing del flujo (script de validación)
-- ✅ Timeline de implementación (13.5 horas)
+-  **Flujo A (CRÍTICO):** Donación → Entrega → Admin (paso a paso)
+-  **Flujo B (ALTA):** Beneficiario se Capacita
+-  **Flujo C (MEDIA-ALTA):** Monitoreo Administrativo
+-  Pantallas opcionales (Nice-to-Have)
+-  Datos iniciales requeridos (JSON mock)
+-  LocalStorage schema
+-  Checklist: Qué demostrar en hackathon (20 minutos)
+-  Validaciones funcionales clave
+-  Errores comunes a evitar
+-  Testing del flujo (script de validación)
+-  Timeline de implementación (13.5 horas)
 
 **Lectores:** Todos (especialmente para planificación de sprints)
 
@@ -90,7 +90,7 @@ Esta carpeta contiene los **documentos de arquitectura de sistema completos** pa
 
 ---
 
-## 🎯 Guía Rápida de Lectura Según Rol
+##  Guía Rápida de Lectura Según Rol
 
 ### Si eres **Product Manager / Sponsor**
 1. Lée: Resumen de ARQUITECTURA.md (secciones 1-2)
@@ -123,7 +123,7 @@ Esta carpeta contiene los **documentos de arquitectura de sistema completos** pa
 
 ---
 
-## 🚀 Inicio Rápido (Para comenzar HOY)
+##  Inicio Rápido (Para comenzar HOY)
 
 ### Paso 1: Preparar el Proyecto (15 minutos)
 ```bash
@@ -164,7 +164,7 @@ Crear stores (sección ARQUITECTURA.md 3.2):
 
 ---
 
-## 📊 Resumen de Arquitectura
+##  Resumen de Arquitectura
 
 ```
 FRONTEND (Vue 3 + Vite)
@@ -198,32 +198,31 @@ FRONTEND (Vue 3 + Vite)
 
 ---
 
-## 📈 Métricas de Éxito
+##  Métricas de Éxito
 
 ### Demo (Hackathon - 20 minutos)
-- ✅ 3 flujos core funcionando
-- ✅ Sin errores JS en consola
-- ✅ Responsividad en mobile/tablet/desktop
-- ✅ Datos persisten
-- ✅ Transiciones suaves
+-  3 flujos core funcionando
+-  Sin errores JS en consola
+-  Responsividad en mobile/tablet/desktop
+-  Datos persisten
+-  Transiciones suaves
 
 ### MVP Visual
-- ✅ 7 módulos navegables
-- ✅ 8+ pantallas funcionales
-- ✅ 3 roles diferenciados
-- ✅ Gráficos/reportes
-- ✅ Mapa interactivo
+-  7 módulos navegables
+-  8+ pantallas funcionales
+-  3 roles diferenciados
+-  Gráficos/reportes
+-  Mapa interactivo
 
 ### Post-Hackathon (Si ganan)
-- ✅ Backend integration (fase 2)
-- ✅ Autenticación real con JWT
-- ✅ Base de datos PostgreSQL
-- ✅ APIs REST
-- ✅ Deploy en producción
-
+-  Backend integration (fase 2)
+-  Autenticación real con JWT
+-  Base de datos PostgreSQL
+-  APIs REST
+-  Deploy en producción
 ---
 
-## 🎓 Tecnologías Clave por Componente
+##  Tecnologías Clave por Componente
 
 | Componente | Tecnología | Razón |
 |-----------|-----------|-------|
@@ -239,7 +238,7 @@ FRONTEND (Vue 3 + Vite)
 
 ---
 
-## 📞 Contactos y Dudas
+##  Contactos y Dudas
 
 Si tienes dudas sobre:
 
@@ -251,15 +250,15 @@ Si tienes dudas sobre:
 
 ---
 
-## 🎯 Objetivo Final
+##  Objetivo Final
 
 **Crear un prototipo funcional de alta fidelidad que valide el concepto de redistribución de alimentos + capacitación/empleo, sin backend, en <16 horas de desarrollo, presentable en 20 minutos.**
 
-✅ Esto es totalmente alcanzable con este plan.
+ Esto es totalmente alcanzable con este plan.
 
 ---
 
-## 📄 Versionado
+##  Versionado
 
 - **Versión:** 1.0
 - **Fecha:** Abril 15, 2025
@@ -268,5 +267,4 @@ Si tienes dudas sobre:
 
 ---
 
-**¡Listos a construir? Comencen con ARQUITECTURA.md y código! 🚀**
 
