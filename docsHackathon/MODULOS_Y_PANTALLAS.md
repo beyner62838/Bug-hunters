@@ -423,7 +423,7 @@ Duración:
 ├─────────────────────────┤
 │ Título Curso            │
 │ Categoría (badge)       │
-│ ⭐ 4.5 (12 reviews)     │
+│  4.5 (12 reviews)     │
 │ Instructor: Nombre      │
 │ Duración: 20 horas      │
 │ Inscrito: 234 personas  │
@@ -498,13 +498,13 @@ Progreso: 45%
 #### 6.2.4 ReviewsSection
 
 ```
-4.5 ⭐ basado en 12 reviews
+4.5  basado en 12 reviews
 
 "Excelente curso, muy práctico"
-- Juan G., 5⭐, hace 2 días
+- Juan G., 5, hace 2 días
 
 "Me ayudó a empezar mi negocio"
-- María L., 5⭐, hace 1 semana
+- María L., 5, hace 1 semana
 ```
 
 ---
@@ -535,7 +535,7 @@ Organizaciones Aliadas
 │ Tipo: ONG | Empresa    │
 │ Ubicación: Zona XYZ    │
 │ Programas: 3           │
-│ ⭐ 4.8 (45 reviews)    │
+│  4.8 (45 reviews)    │
 │ [Ver Perfil]           │
 └────────────────────────┘
 ```
@@ -588,13 +588,13 @@ Panel Administrativo
 **Métricas principales (4 cards):**
 ```
 ┌──────────────────┐ ┌──────────────────┐
-│ 🚚 Entregas Hoy  │ │ 👥 Personas Hoy  │
+│  Entregas Hoy  │ │  Personas Hoy  │
 │       12         │ │       45          │
 │    (↑ 5%)       │ │    (↑ 12%)       │
 └──────────────────┘ └──────────────────┘
 
 ┌──────────────────┐ ┌──────────────────┐
-│ 📦 Alimentos (kg)│ │ 📍 Zonas Activas │
+│  Alimentos (kg)│ │  Zonas Activas │
 │      1,245       │ │        8         │
 │    (↑ 23%)      │ │    (→ 0%)        │
 └──────────────────┘ └──────────────────┘
@@ -632,7 +632,7 @@ Panel Administrativo
 ```
 | ID | Usuario | Acción | Tipo | Estado | Botones |
 |----|---------+--------+------+--------+---------|
-| 1  | John D. | Publica alimento | Food | ⏳ Pendiente | ✅ Aprobar | ❌ Rechazar |
+| 1  | John D. | Publica alimento | Food |  Pendiente |  Aprobar |  Rechazar |
 ```
 
 **ReportedContentList:**
@@ -650,7 +650,7 @@ Contenido Reportado:
 2025-04-15 14:35 - Sistema asignó a Org ABC
 2025-04-15 14:40 - Org ABC confirmó recepción
 2025-04-15 15:00 - Entrega completada
-2025-04-15 15:05 - Beneficiario confirmó satisfacción (⭐⭐⭐⭐⭐)
+2025-04-15 15:05 - Beneficiario confirmó satisfacción
 ```
 
 ---
@@ -717,7 +717,7 @@ components/common/
 6. Receptor solicita ayuda (su zona coincide)
 7. Sistema asigna
 8. Entrega confirmada
-9. Admin ve en trazabilidad ✅
+9. Admin ve en trazabilidad 
 ```
 
 ### Flujo 2: Beneficiario se Capacita
@@ -729,7 +729,7 @@ components/common/
 4. Accede a módulos y videos
 5. Completa quiz
 6. Obtiene certificado (simulado)
-7. Datos en perfil (para empleadores) ✅
+7. Datos en perfil (para empleadores) 
 ```
 
 ### Flujo 3: Admin Monitorea
@@ -739,7 +739,7 @@ components/common/
 2. Ve 3 gráficos de impacto
 3. Ve entregas en mapa
 4. Revisa trazabilidad de alimento específico
-5. Exporta reporte PDF (simulado) ✅
+5. Exporta reporte PDF (simulado) 
 ```
 
 ---
@@ -760,21 +760,21 @@ Cada entidad debe tener al menos 10-15 registros iniciales en JSON para que la d
 
 Cada pantalla debe cumplir:
 
-✅ **Responsividad**
+**Responsividad**
 - Mobile (320px)
 - Tablet (768px)
 - Desktop (1920px)
 
-✅ **Performance**
+ **Performance**
 - First Contentful Paint < 1.5s
 - Time to Interactive < 3s
 
-✅ **Accesibilidad**
+ **Accesibilidad**
 - Contraste suficiente
 - Labels en formularios
 - Navegación por teclado
 
-✅ **UX**
+ **UX**
 - CTA claros y visibles
 - Validaciones de formulario útiles
 - Feedback inmediato (toasts)
