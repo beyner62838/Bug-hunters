@@ -42,12 +42,12 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-  background: rgba(33, 126, 90, 0.18);
+  background: rgba(248, 248, 248, 0.18);
   border-radius: 999px;
 }
 
 .panel-surface {
-  @apply relative overflow-hidden rounded-[2rem] border border-white/85 bg-white/95 shadow-panel backdrop-blur;
+  @apply relative overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/90 shadow-panel backdrop-blur;
 }
 
 .sidebar-item {
@@ -55,7 +55,7 @@ body {
 }
 
 .sidebar-item-active {
-  @apply bg-white text-slate-950 shadow-soft;
+  @apply bg-white/10 text-white shadow-soft;
 }
 
 .sidebar-item-active::before {
@@ -66,21 +66,21 @@ body {
   bottom: 0;
   width: 4px;
   border-radius: 999px 0 0 999px;
-  background: rgba(79, 192, 144, 0.9);
+  background: #e60000;
 }
 
 .stat-card-deco {
-  @apply mb-4 flex h-14 w-14 items-center justify-center rounded-[1.75rem] bg-gradient-to-br;
+  @apply mb-4 flex h-14 w-14 items-center justify-center rounded-[1.75rem] bg-gradient-to-br from-red-600 to-slate-900;
 }
 
 .stat-card-icon {
-  @apply inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-slate-950 shadow-sm;
+  @apply inline-flex h-9 w-9 items-center justify-center rounded-full bg-slate-950/90 text-red-500 shadow-sm;
 }
 
 .section-title {
-  @apply font-display text-2xl font-semibold tracking-tight text-slate-900;
+  @apply font-display text-2xl font-semibold tracking-tight text-slate-50;
 }
 
 .page-shell {
-  @apply space-y-6;
+  @apply space-y-6 text-slate-100;
 }

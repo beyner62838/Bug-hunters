@@ -91,11 +91,11 @@ async function handleLogout() {
     ></div>
 
     <aside
-      class="fixed inset-y-0 left-0 z-40 flex w-80 max-w-[86vw] flex-col border-r border-white/70 bg-slate-950 px-5 py-6 text-slate-100 shadow-2xl transition duration-300 lg:sticky lg:max-w-none"
+      class="fixed inset-y-0 left-0 z-40 flex w-80 max-w-[86vw] flex-col border-r border-white/10 bg-slate-950 px-5 py-6 text-slate-100 shadow-2xl transition duration-300 lg:sticky lg:max-w-none"
       :class="drawerClasses"
     >
       <RouterLink to="/" class="mb-8 flex items-center gap-3" @click="closeSidebar">
-        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-400 to-ocean-500 font-display text-lg font-bold text-white">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-500 font-display text-lg font-bold text-white">
           RA
         </div>
         <div>

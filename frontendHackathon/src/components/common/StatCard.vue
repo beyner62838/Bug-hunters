@@ -51,11 +51,11 @@ const displayValue = computed(() =>
         </svg>
       </span>
     </div>
-    <p class="text-sm font-medium text-slate-500">{{ props.title }}</p>
-    <p class="mt-2 font-display text-3xl font-semibold tracking-tight text-slate-950">
+    <p class="text-sm font-medium text-slate-300">{{ props.title }}</p>
+    <p class="mt-2 font-display text-3xl font-semibold tracking-tight text-white">
       {{ displayValue }}
     </p>
-    <p v-if="props.hint" class="mt-2 text-sm leading-6 text-slate-500">
+    <p v-if="props.hint" class="mt-2 text-sm leading-6 text-slate-400">
       {{ props.hint }}
     </p>
   </article>
