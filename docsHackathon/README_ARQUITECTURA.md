@@ -26,7 +26,7 @@ Esta carpeta contiene los **documentos de arquitectura de sistema completos** pa
 
 ---
 
-### 2. [STACK_TECNOLOGICO.md](STACK_TECNOLOGICO.md) 🔧
+### 2. [STACK_TECNOLOGICO.md](STACK_TECNOLOGICO.md) 
 **Acciona aquí para: Decisiones técnicas justificadas**
 
 -  Stack recomendado (Vue 3, Vite, Vue Router, Pinia, Tailwind, Leaflet)
@@ -45,7 +45,7 @@ Esta carpeta contiene los **documentos de arquitectura de sistema completos** pa
 
 ---
 
-### 3. [MODULOS_Y_PANTALLAS.md](MODULOS_Y_PANTALLAS.md) 🎨
+### 3. [MODULOS_Y_PANTALLAS.md](MODULOS_Y_PANTALLAS.md) 
 **Acciona aquí para: Especificación de pantallas y componentes**
 
 -  Mapeo completo App → Vistas → Componentes
